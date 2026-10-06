@@ -1,0 +1,275 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customers — Sightline</title>
+<meta name="description" content="Four teams, four ugly questions: how Fieldnote, Pallet, Marrow and Brevik cut analyst queues, time to answer, churn detection and security review with Sightline.">
+<meta name="theme-color" content="#f4f4f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0b'/%3E%3Ccircle cx='11' cy='16' r='4.5' fill='%23c8f34b'/%3E%3Cpath d='M11 16h15M26 12v8' stroke='%23c8f34b' stroke-width='2'/%3E%3C/svg%3E">
+<script src="../assets/boot.js"></script>
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/core.css">
+<link rel="stylesheet" href="style.css">
+</head><body class="sl sl--pg" data-page="customers">
+
+<!--@hdr-->
+<header class="hdr" data-hdr data-theme="light">
+  <a class="brand" href="index.html" aria-label="Sightline, home">
+    <svg class="brand__mark" viewBox="0 0 30 20" aria-hidden="true"><circle cx="7" cy="10" r="5"/><path d="M7 10h21M28 5v10"/></svg>
+    <span>Sightline</span>
+  </a>
+  <nav class="hdr__nav" aria-label="Primary">
+    <a href="index.html#product">Product</a>
+    <a href="index.html#how">How it works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="security.html">Security</a>
+    <a href="customers.html" aria-current="page">Customers</a>
+    <a href="changelog.html">Changelog</a>
+  </nav>
+  <div class="hdr__end">
+    <a class="hdr__cta" href="book.html"><i class="hdr__dot"></i><span>Book a walkthrough</span></a>
+    <button class="hdr__burger" type="button" data-menu aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
+  </div>
+</header>
+<!--/@hdr-->
+
+<!--@menu-->
+<div class="menu" data-menu-panel>
+  <div class="menu__in">
+    <span class="mono menu__label">Menu</span>
+    <nav class="menu__nav" aria-label="Mobile">
+      <a href="index.html#product"><i>01</i>Product</a>
+      <a href="index.html#how"><i>02</i>How it works</a>
+      <a href="pricing.html"><i>03</i>Pricing</a>
+      <a href="security.html"><i>04</i>Security</a>
+      <a href="customers.html" aria-current="page"><i>05</i>Customers</a>
+      <a href="changelog.html"><i>06</i>Changelog</a>
+    </nav>
+    <a class="btn btn--lime menu__cta" href="book.html"><span>Book a walkthrough</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <p class="mono menu__foot">Rotterdam · New York</p>
+  </div>
+</div>
+<!--/@menu-->
+
+
+<main id="main">
+
+<!-- ───────── HEAD ───────── -->
+<section class="ph ph--cust" data-hdr-theme="light">
+  <div class="ph__k mono"><span>(Customers)</span><span class="hide-sm">187 teams · 2.3 million questions in Q3</span></div>
+  <h1 class="ph__title" aria-label="Four teams. Four ugly questions.">
+    <span class="hl"><span>Four teams.</span></span>
+    <span class="hl"><span>Four <em>ugly</em> questions.</span></span>
+  </h1>
+  <div class="ph__side">
+    <p class="ph__lead">Each of these teams was waiting on a number. Here is what they asked, what they connected, and how the wait changed. The charts are theirs; scroll and watch the line cross over.</p>
+  </div>
+  <nav class="cidx ph__more" aria-label="Customer stories">
+    <a href="#c1"><span class="cidx__n mono">01</span><span class="cidx__c">Fieldnote</span><span class="cidx__s mono">Research software</span><span class="cidx__m">41<svg class="ar" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg>6 tickets a week</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    <a href="#c2"><span class="cidx__n mono">02</span><span class="cidx__c">Pallet</span><span class="cidx__s mono">Freight marketplace</span><span class="cidx__m">2.8 days<svg class="ar" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg>6 minutes</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    <a href="#c3"><span class="cidx__n mono">03</span><span class="cidx__c">Marrow</span><span class="cidx__s mono">Meal-kit subscriptions</span><span class="cidx__m">21<svg class="ar" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg>2 days to notice</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    <a href="#c4"><span class="cidx__n mono">04</span><span class="cidx__c">Brevik</span><span class="cidx__s mono">Neobank</span><span class="cidx__m">11 weeks<svg class="ar" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg>9 days</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+  </nav>
+</section>
+
+<!-- ───────── STORY 01 ───────── -->
+<section class="story" id="c1" data-hdr-theme="light" data-chart="bars">
+  <header class="story__head">
+    <div class="sec-label mono"><span>(01)</span><span>Research software · Utrecht · 140 people</span></div>
+    <h2 class="story__name" data-split="lines">Fieldnote</h2>
+    <p class="story__sum" data-reveal>The analyst queue went from 41 tickets a week to six.</p>
+  </header>
+  <div class="story__grid">
+    <div class="story__side">
+      <div class="scard dk" data-card>
+        <div class="scard__bar mono"><span>Fieldnote <i>/</i> <b>Analyst tickets per week</b></span><span class="scard__ba"><em data-ba="0">Before</em><em data-ba="1">After</em></span></div>
+        <div class="scard__prog"><i data-prog></i></div>
+        <div class="scard__metric" aria-live="off"><span class="sm__from" data-from></span><svg class="sm__arr" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg><span class="sm__to" data-to></span><small class="mono" data-unit></small></div>
+        <div class="scard__plot" data-plot role="img" aria-label="Analyst tickets per week: before and after Sightline"></div>
+        <p class="scard__foot mono">Source: Fieldnote ticket tracker, analytics queue. Sightline connected in week 31.</p>
+      </div>
+    </div>
+    <div class="story__text">
+      <div class="sb"><p class="sb__n mono"><span>01</span>The question</p><h3 class="h3">Nobody could ask a question without filing one.</h3><p>Every Thursday the product managers at Fieldnote sent the data team a list. How many teams used offline sync last week? Did the new import flow change activation? Three analysts spent about two days of every week answering questions that took a sentence to ask.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>02</span>What they connected</p><h3 class="h3">Eleven minutes to connect, an afternoon to agree.</h3><p>A Postgres replica, a BigQuery events warehouse and billing. Setup took eleven minutes; the semantic layer took an afternoon. The analysts defined “active team” once, and found out they had been using three definitions.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>03</span>What changed</p><h3 class="h3">Fifty tickets became one definition.</h3><p>PMs asked 1,900 questions in the first month. Most never reached an analyst. Some came back as a request to define a metric properly, which the analysts did, once, in the semantic layer, instead of fifty times in fifty tickets.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>04</span>The number</p><h3 class="h3">Six tickets, and a model that shipped.</h3><p>Six tickets a week, all of them genuinely hard. And the attribution model the team had postponed since spring shipped in week 36.</p></div>
+      <dl class="facts"><div><dt class="mono">Plan</dt><dd>Workspace</dd></div><div><dt class="mono">Sources</dt><dd>4</dd></div><div><dt class="mono">Asking seats</dt><dd>38</dd></div><div><dt class="mono">First answer</dt><dd>11 minutes after connecting</dd></div></dl>
+    </div>
+  </div>
+</section>
+<!-- ───────── QUOTE · Fieldnote ───────── -->
+<section class="qs qs--ink" data-hdr-theme="dark">
+  <p class="qs__k mono">Fieldnote</p>
+  <figure class="qs__f">
+    <blockquote class="qs__q" data-split="lines">“Our PMs asked 1,900 questions in the first month. The analysts finally shipped the attribution model they had been postponing since spring.”</blockquote>
+    <figcaption><span class="av" aria-hidden="true">IO</span><span><b>Ines Okafor</b><em class="mono">Head of Data, Fieldnote</em></span></figcaption>
+  </figure>
+</section>
+<!-- ───────── STORY 02 ───────── -->
+<section class="story" id="c2" data-hdr-theme="light" data-chart="dots">
+  <header class="story__head">
+    <div class="sec-label mono"><span>(02)</span><span>Freight marketplace · Rotterdam · 310 people</span></div>
+    <h2 class="story__name" data-split="lines">Pallet</h2>
+    <p class="story__sum" data-reveal>Median time to an answer fell from 2.8 days to six minutes.</p>
+  </header>
+  <div class="story__grid">
+    <div class="story__side">
+      <div class="scard dk" data-card>
+        <div class="scard__bar mono"><span>Pallet <i>/</i> <b>Hours until a question was answered</b></span><span class="scard__ba"><em data-ba="0">Before</em><em data-ba="1">After</em></span></div>
+        <div class="scard__prog"><i data-prog></i></div>
+        <div class="scard__metric" aria-live="off"><span class="sm__from" data-from></span><svg class="sm__arr" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg><span class="sm__to" data-to></span><small class="mono" data-unit></small></div>
+        <div class="scard__plot" data-plot role="img" aria-label="Hours until a question was answered: before and after Sightline"></div>
+        <p class="scard__foot mono">Source: Pallet request log, 30 questions per period. Sightline connected in week 14.</p>
+      </div>
+    </div>
+    <div class="story__text">
+      <div class="sb"><p class="sb__n mono"><span>01</span>The question</p><h3 class="h3">Three numbers for one delivery.</h3><p>Pallet matches shippers with empty trailer space in fourteen countries. Pricing, operations and growth each had their own “on-time delivery” number, and each lived in a different analyst’s head.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>02</span>What they connected</p><h3 class="h3">It answered. Then it disagreed with the dashboard.</h3><p>A ClickHouse cluster with 9.8 billion events, plus billing. Tomás Reyes booked the walkthrough to prove it would not work on Pallet’s schema. It answered the sample question, late deliveries by lane, with the SQL attached. Then he spent an hour finding where it disagreed with the dashboard. It was right in two of the three places.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>03</span>What changed</p><h3 class="h3">The slow questions got faster too.</h3><p>Questions stopped waiting for a slot. The ones that still need an analyst, about one in twenty, now arrive with the SQL already drafted and the ambiguity already named.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>04</span>The number</p><h3 class="h3">From 212 to 9.</h3><p>Questions that waited more than a week: 212 a quarter before, 9 after.</p></div>
+      <dl class="facts"><div><dt class="mono">Plan</dt><dd>Workspace</dd></div><div><dt class="mono">Sources</dt><dd>3</dd></div><div><dt class="mono">Asking seats</dt><dd>64</dd></div><div><dt class="mono">Region</dt><dd>EU, Frankfurt</dd></div></dl>
+    </div>
+  </div>
+</section>
+<!-- ───────── QUOTE · Pallet ───────── -->
+<section class="qs qs--lime" data-hdr-theme="light">
+  <p class="qs__k mono">Pallet</p>
+  <figure class="qs__f">
+    <blockquote class="qs__q" data-split="lines">“We booked it to prove it wouldn’t work on our schema. It worked on our schema.”</blockquote>
+    <figcaption><span class="av" aria-hidden="true">TR</span><span><b>Tomás Reyes</b><em class="mono">Group PM, Pallet</em></span></figcaption>
+  </figure>
+</section>
+<!-- ───────── STORY 03 ───────── -->
+<section class="story" id="c3" data-hdr-theme="light" data-chart="dumbbell">
+  <header class="story__head">
+    <div class="sec-label mono"><span>(03)</span><span>Meal-kit subscriptions · Berlin · 520 people</span></div>
+    <h2 class="story__name" data-split="lines">Marrow</h2>
+    <p class="story__sum" data-reveal>Churn spikes are noticed in two days, not twenty-one.</p>
+  </header>
+  <div class="story__grid">
+    <div class="story__side">
+      <div class="scard dk" data-card>
+        <div class="scard__bar mono"><span>Marrow <i>/</i> <b>Days from a churn spike to someone noticing</b></span><span class="scard__ba"><em data-ba="0">Before</em><em data-ba="1">After</em></span></div>
+        <div class="scard__prog"><i data-prog></i></div>
+        <div class="scard__metric" aria-live="off"><span class="sm__from" data-from></span><svg class="sm__arr" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg><span class="sm__to" data-to></span><small class="mono" data-unit></small></div>
+        <div class="scard__plot" data-plot role="img" aria-label="Days from a churn spike to someone noticing: before and after Sightline"></div>
+        <p class="scard__foot mono">Source: Marrow growth team, five tracked segments, spikes above an eight-week range.</p>
+      </div>
+    </div>
+    <div class="story__text">
+      <div class="sb"><p class="sb__n mono"><span>01</span>The question</p><h3 class="h3">The review met on Mondays. The churn did not.</h3><p>Marrow ships 1.4 million boxes a month. When cancellations ticked up, the weekly churn review caught it about three weeks late, by which time the cause had usually changed.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>02</span>What they connected</p><h3 class="h3">One standing question, every morning at seven.</h3><p>Subscriptions, support tickets and delivery events. The growth team saved one standing question: which segments are cancelling above their eight-week range? It runs at 07:00 and posts to #growth.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>03</span>What changed</p><h3 class="h3">Hamburg, in four days.</h3><p>Spikes arrive with a segment, a likely cause and the query. In March a delivery-slot change in Hamburg pushed cancellations up 1.9 points. It was reversed in four days instead of three weeks.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>04</span>The number</p><h3 class="h3">Twenty-one days became two.</h3><p>Across five segments, the time from spike to someone noticing fell from 21 days to 2.</p></div>
+      <dl class="facts"><div><dt class="mono">Plan</dt><dd>Workspace</dd></div><div><dt class="mono">Sources</dt><dd>5</dd></div><div><dt class="mono">Asking seats</dt><dd>22</dd></div><div><dt class="mono">Scheduled posts</dt><dd>9 a week</dd></div></dl>
+    </div>
+  </div>
+</section>
+<!-- ───────── QUOTE · Marrow ───────── -->
+<section class="qs qs--paper" data-hdr-theme="light">
+  <p class="qs__k mono">Marrow</p>
+  <figure class="qs__f">
+    <blockquote class="qs__q" data-scrub>“The dashboard told us what happened. Sightline told us it was the Thursday delivery slot, and showed us the query.”</blockquote>
+    <figcaption><span class="av" aria-hidden="true">KL</span><span><b>Kasia Lindqvist</b><em class="mono">VP Growth, Marrow</em></span></figcaption>
+  </figure>
+</section>
+<!-- ───────── STORY 04 ───────── -->
+<section class="story" id="c4" data-hdr-theme="light" data-chart="stack">
+  <header class="story__head">
+    <div class="sec-label mono"><span>(04)</span><span>Neobank · Oslo · 900 people</span></div>
+    <h2 class="story__name" data-split="lines">Brevik</h2>
+    <p class="story__sum" data-reveal>The security review took nine days, not eleven weeks.</p>
+  </header>
+  <div class="story__grid">
+    <div class="story__side">
+      <div class="scard dk" data-card>
+        <div class="scard__bar mono"><span>Brevik <i>/</i> <b>Security review to production</b></span><span class="scard__ba"><em data-ba="0">Before</em><em data-ba="1">After</em></span></div>
+        <div class="scard__prog"><i data-prog></i></div>
+        <div class="scard__metric" aria-live="off"><span class="sm__from" data-from></span><svg class="sm__arr" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg><span class="sm__to" data-to></span><small class="mono" data-unit></small></div>
+        <div class="scard__plot" data-plot role="img" aria-label="Security review to production: before and after Sightline"></div>
+        <p class="scard__foot mono">Source: Brevik security programme office. Previous tool reviewed in the prior year.</p>
+      </div>
+    </div>
+    <div class="story__text">
+      <div class="sb"><p class="sb__n mono"><span>01</span>The question</p><h3 class="h3">Eleven weeks, four hand-offs.</h3><p>A bank’s analytics tool needs a security review. Brevik’s last one took eleven weeks: a questionnaire, a penetration-test review, legal, and a pilot approval nobody could find the owner of.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>02</span>What they connected</p><h3 class="h3">Verified in the first hour.</h3><p>Enterprise, in a single-tenant Frankfurt region, with customer-managed keys and SCIM from their directory. The read-only grants were verified in the first hour. Sightline refused to connect once, because one role was wider than the ticket said.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>03</span>What changed</p><h3 class="h3">One meeting, with the diagram open.</h3><p>The review became one meeting, with the audit log and the data-flow diagram open on screen. The questionnaire was answered by a person in two days; the DPA and sign-off followed within the week.</p></div>
+      <div class="sb"><p class="sb__n mono"><span>04</span>The number</p><h3 class="h3">Nine days, door to door.</h3><p>Nine days from first call to production, and the first analyst question was answered that afternoon.</p></div>
+      <dl class="facts"><div><dt class="mono">Plan</dt><dd>Enterprise</dd></div><div><dt class="mono">Sources</dt><dd>6</dd></div><div><dt class="mono">Asking seats</dt><dd>140</dd></div><div><dt class="mono">Region</dt><dd>Frankfurt, single-tenant</dd></div></dl>
+      <figure class="pull"><blockquote>“Their grant check refused to connect until we fixed our own role. That was the review.”</blockquote><figcaption><span class="av" aria-hidden="true">OH</span><span><b>Oskar Haugen</b><em class="mono">CISO, Brevik</em></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+<!-- ───────── NAMES ───────── -->
+<section class="names" data-hdr-theme="light">
+  <div class="names__top">
+    <div class="sec-label mono"><span>(05)</span><span>Also asking</span></div>
+    <p class="names__stat"><b data-count="187">187</b> teams, and a new one most weeks.</p>
+  </div>
+  <div class="mq mq--ink" data-marquee="0.5" data-speed2="70"><div class="mq__in"><span>Fieldnote</span><i></i><span>Pallet</span><i></i><span>Marrow</span><i></i><span>Brevik</span><i></i><span>Halden</span><i></i><span>Tidewater</span><i></i><span>Ostrava Freight</span><i></i><span>Lumen Rail</span><i></i><span>Cobalt &amp; Finch</span><i></i><span>Nine Yards</span><i></i><span>Papertrail Health</span><i></i><span>Quill</span><i></i><span>Bramble</span><i></i><span>Northgate</span><i></i><span>Oddfellow</span><i></i><span>Saltmarsh</span><i></i><span>Sundial</span><i></i><span>Vantage Row</span><i></i></div></div>
+</section>
+
+<!-- ───────── CTA ───────── -->
+<section class="cta" data-hdr-theme="dark">
+  <canvas class="cta__field" aria-hidden="true"></canvas>
+  <div class="cta__top mono"><span>(06)</span><span>30 min · Mon–Fri</span></div>
+  <h2 class="cta__title" data-split="lines">Your ugly question.</h2>
+  <div class="cta__row">
+    <p class="cta__sub">Bring the one your dashboard can’t answer. We will ask it on your own schema, with the SQL on screen.</p>
+    <a class="cta__btn" href="book.html" data-magnetic="0.4" data-cursor="Book">
+      <span class="cta__btn-in"><span>Book a walkthrough</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!--@foot-->
+<footer class="foot" data-hdr-theme="dark">
+  <div class="foot__grid">
+    <div class="foot__col foot__col--idx">
+      <p class="mono foot__h">Index</p>
+      <a href="index.html#product">Product</a>
+      <a href="index.html#how">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="security.html">Security</a>
+      <a href="customers.html" aria-current="page">Customers</a>
+      <a href="changelog.html">Changelog</a>
+    </div>
+    <div class="foot__col">
+      <p class="mono foot__h">Talk to us</p>
+      <a href="book.html">Book a walkthrough</a>
+      <a href="pricing.html#calc">Estimate your month</a>
+      <a href="security.html#controls">Read the security sheet</a>
+    </div>
+    <div class="foot__col">
+      <p class="mono foot__h">Offices</p>
+      <p>Rotterdam, Kop van Zuid</p><p>New York, Flatiron</p>
+    </div>
+    <div class="foot__col foot__status">
+      <p class="mono foot__h">Security</p>
+      <p>SOC 2 Type II</p>
+      <p class="mono foot__small">Read-only by design</p>
+    </div>
+  </div>
+  <div class="foot__word" aria-hidden="true">
+    <span>Sightline</span>
+    <i class="foot__line"></i>
+  </div>
+  <div class="foot__base mono">
+    <span>© 2026 Sightline Analytics B.V.</span>
+    <span class="hide-sm">Read-only since day one</span>
+    <button type="button" class="to-top" id="toTop">Back to top</button>
+  </div>
+</footer>
+<!--/@foot-->
+
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/SplitText.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/config.js"></script>
+<script src="../assets/core.js"></script>
+<script src="site.js"></script>
+<script src="pages.js"></script>
+<script src="customers.js"></script>
+</body></html>

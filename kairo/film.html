@@ -1,0 +1,133 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Film — KAIRO, Berlin-Kreuzberg</title>
+<meta name="description" content="Full film sheet from KAIRO: director’s note, technical sheet, stills and credits.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050505'/%3E%3Cpath d='M9 6h4.6v8.2L18.8 6h5L18 15l6.2 11h-5.1l-4-7.6-1.5 2.3V26H9z' fill='%23F2F2EF'/%3E%3C/svg%3E">
+<script src="../assets/boot.js"></script>
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/core.css">
+<link rel="stylesheet" href="style.css">
+</head><body class="p-film">
+
+<header class="hdr" data-hdr data-theme="dark">
+  <a class="hdr__brand" href="index.html" aria-label="KAIRO, home"><i></i>KAIRO</a>
+  <nav class="hdr__nav" aria-label="Primary">
+    <a class="nl" href="work.html" data-t="Work"><span>Work<sup>06</sup></span></a>
+    <a class="nl" href="studio.html" data-t="Studio"><span>Studio</span></a>
+    <a class="nl" href="journal.html" data-t="Journal"><span>Journal</span></a>
+    <a class="nl" href="contact.html" data-t="Contact"><span>Contact</span></a>
+  </nav>
+  <div class="hdr__tc"><span class="dim">Berlin-Kreuzberg</span><span>Est. 2016</span></div>
+  <button class="hdr__menu" type="button" data-menu aria-expanded="false" aria-controls="menu"><span>Menu</span><span>Close</span></button>
+</header>
+
+<div class="menu" id="menu" data-menu-panel>
+  <nav class="menu__nav" aria-label="Mobile">
+    <a href="work.html"><span class="mono">01</span><span class="d">Work</span></a>
+    <a href="studio.html"><span class="mono">02</span><span class="d">Studio</span></a>
+    <a href="journal.html"><span class="mono">03</span><span class="d">Journal</span></a>
+    <a href="contact.html"><span class="mono">04</span><span class="d">Contact</span></a>
+  </nav>
+  <div class="menu__foot"><span class="lab">Kreuzberg, Berlin</span><span class="mono">Mon–Fri 09:30–19:00</span></div>
+</div>
+
+<main id="filmRoot">
+
+<!-- HERO -->
+<section class="hero hero--film t-dark" data-hdr-theme="dark">
+  <div class="hero__frame" data-cursor="Still">
+    <div class="hero__img"><img id="fHero" src="../img/k_w1.webp" alt="" width="1200" height="1482" fetchpriority="high"></div>
+    <span class="vf vf--tl"></span><span class="vf vf--tr"></span><span class="vf vf--bl"></span><span class="vf vf--br"></span>
+    <div class="hero__meta hero__meta--tl mono" id="fMetaL"></div>
+    <div class="hero__meta hero__meta--tr mono" id="fMetaR"></div>
+  </div>
+  <h1 class="wm" data-wm data-base="92" id="fTitle" aria-label="Film">Film</h1>
+  <div class="hero__base" id="fBase"></div>
+</section>
+
+<!-- BRIEF -->
+<section class="fbrief t-dark" data-hdr-theme="dark">
+  <div class="sec-top"><span class="lab">(01) The film</span><span class="mono dim" id="fKind"></span><span class="lab" id="fYear"></span></div>
+  <div class="fbrief__grid">
+    <p class="fbrief__p" id="fSyn" data-split="lines"></p>
+    <dl class="fbrief__k" id="fClient"></dl>
+  </div>
+  <div class="report" id="fFacts" data-stagger="0.08"></div>
+</section>
+
+<!-- DIRECTOR'S NOTE -->
+<section class="fnote t-light" data-hdr-theme="light">
+  <div class="sec-top"><span class="lab">(02) Director’s note</span><span class="mono" id="fNoteBy"></span><span class="lab">Written after the grade</span></div>
+  <blockquote class="fnote__q d" id="fQuote" data-split="lines"></blockquote>
+  <div class="fnote__grid">
+    <div class="fnote__side"><span class="lab" id="fNoteName"></span><span class="mono dim" id="fNoteRole"></span></div>
+    <div class="fnote__body" id="fNote"></div>
+  </div>
+</section>
+
+<!-- TECHNICAL SHEET -->
+<section class="fspec t-dark" data-hdr-theme="dark">
+  <div class="sec-top"><span class="lab">(03) Technical sheet</span><span class="mono dim">Everything we wrote on the can</span><span class="lab" id="fRoll"></span></div>
+  <div class="fspec__grid">
+    <div class="fspec__viz">
+      <div class="gate" id="fGate"><svg viewBox="0 0 400 300" aria-hidden="true"><g class="gate__g"><rect class="gate__o" x="10" y="10" width="380" height="280"/><rect class="gate__f" id="fFrame" x="40" y="60" width="320" height="180"/><path class="gate__x" d="M200 140v20M190 150h20"/><path class="gate__c" id="fSafe"/></g></svg><span class="mono gate__r" id="fRatio"></span><span class="mono gate__l" id="fGateL"></span></div>
+      <div class="exp" id="fExp"></div>
+    </div>
+    <dl class="fspec__tbl" id="fSpec" data-stagger="0.05"></dl>
+  </div>
+</section>
+
+<!-- STILLS -->
+<section class="fgal t-light" data-hdr-theme="light">
+  <div class="sec-top"><span class="lab">(04) Stills</span><span class="mono">Frame grabs and contact prints, not publicity</span><span class="lab" id="fStillsN"></span></div>
+  <div class="fgal__grid" id="fGal"></div>
+</section>
+
+<!-- CREDITS ROLL -->
+<section class="froll t-dark" data-hdr-theme="dark" id="fRollSec">
+  <div class="froll__pin">
+    <div class="froll__top mono"><span id="fRollT"></span><span>End credits — scroll to run</span><span>TC <b id="fRollTC">00:00:00:00</b></span></div>
+    <figure class="froll__still"><img id="fRollImg" src="../img/k_w1.webp" alt="" width="400" height="500"><figcaption class="mono" id="fRollCap"></figcaption></figure>
+    <div class="froll__vp"><div class="froll__in" id="fCredits"></div></div>
+    <div class="froll__bar"><i id="fRollBar"></i></div>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section class="fnext t-dark" data-hdr-theme="dark">
+  <div class="sec-top"><span class="lab">(05) Next film</span><span class="mono dim" id="fNextIdx"></span><a class="lab ulink" href="work.html">All films</a></div>
+  <a class="fnext__a" id="fNextA" href="film.html" data-cursor="Open">
+    <span class="fnext__t d" id="fNextT"></span>
+    <span class="fnext__m"><span class="lab" id="fNextC"></span><span class="mono dim" id="fNextF"></span><span class="fnext__th"><img id="fNextImg" src="../img/k_w1.webp" alt="" width="1200" height="1482" loading="lazy"></span></span>
+  </a>
+  <a class="fnext__p mono" id="fPrevA" href="film.html"><span class="dim">Previous</span> <b id="fPrevT"></b></a>
+</section>
+
+</main>
+
+<footer class="ft t-dark" data-hdr-theme="dark">
+  <a class="ft__cta" href="contact.html" data-cursor="Write">
+    <span class="ft__cta-top"><span class="lab">(06) Next film</span><span class="mono dim">Replies within two working days</span></span>
+    <span class="wm" data-wm data-base="96" data-text="Have a film?">Have a film?</span>
+    <span class="ft__cta-sub"><span class="big-link">Tell us about it <svg class="arr" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span><span class="mono dim">Fashion film · Music video · Commercial · Documentary</span></span>
+  </a>
+  <div class="ft__grid">
+    <div><span class="lab">Studio</span><p>Kreuzberg, Berlin<br>By the Landwehr Canal<br>Visits by appointment</p></div>
+    <div><span class="lab">Hours</span><p>Mon–Fri 09:30–19:00<br>Shoot days: when the light is right</p></div>
+    <div><span class="lab">Reply</span><p>Within two working days<br>Every brief read the same day</p></div>
+    <div class="ft__links"><span class="lab">Pages</span><a href="work.html">Work</a><a href="studio.html">Studio</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a></div>
+  </div>
+  <div class="ft__base mono"><span>© 2016–2026 KAIRO Filmproduktion</span><span>Shot and finished in Kreuzberg</span><button type="button" data-top>Back to top</button></div>
+</footer>
+
+<div class="grain" aria-hidden="true"></div>
+
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/SplitText.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/config.js"></script>
+<script src="../assets/core.js"></script>
+<script src="site.js"></script>
+</body></html>

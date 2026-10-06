@@ -1,0 +1,336 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing — Sightline</title>
+<meta name="description" content="Sightline is priced by the question, not the login. A free sandbox, a $890 workspace with 10 asking seats and 5,000 questions, and a quoted Enterprise plan. Slide the sliders and see your month.">
+<meta name="theme-color" content="#f4f4f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0b'/%3E%3Ccircle cx='11' cy='16' r='4.5' fill='%23c8f34b'/%3E%3Cpath d='M11 16h15M26 12v8' stroke='%23c8f34b' stroke-width='2'/%3E%3C/svg%3E">
+<script src="../assets/boot.js"></script>
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/core.css">
+<link rel="stylesheet" href="style.css">
+</head><body class="sl sl--pg" data-page="pricing">
+
+<!--@hdr-->
+<header class="hdr" data-hdr data-theme="light">
+  <a class="brand" href="index.html" aria-label="Sightline, home">
+    <svg class="brand__mark" viewBox="0 0 30 20" aria-hidden="true"><circle cx="7" cy="10" r="5"/><path d="M7 10h21M28 5v10"/></svg>
+    <span>Sightline</span>
+  </a>
+  <nav class="hdr__nav" aria-label="Primary">
+    <a href="index.html#product">Product</a>
+    <a href="index.html#how">How it works</a>
+    <a href="pricing.html" aria-current="page">Pricing</a>
+    <a href="security.html">Security</a>
+    <a href="customers.html">Customers</a>
+    <a href="changelog.html">Changelog</a>
+  </nav>
+  <div class="hdr__end">
+    <a class="hdr__cta" href="book.html"><i class="hdr__dot"></i><span>Book a walkthrough</span></a>
+    <button class="hdr__burger" type="button" data-menu aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
+  </div>
+</header>
+<!--/@hdr-->
+
+<!--@menu-->
+<div class="menu" data-menu-panel>
+  <div class="menu__in">
+    <span class="mono menu__label">Menu</span>
+    <nav class="menu__nav" aria-label="Mobile">
+      <a href="index.html#product"><i>01</i>Product</a>
+      <a href="index.html#how"><i>02</i>How it works</a>
+      <a href="pricing.html" aria-current="page"><i>03</i>Pricing</a>
+      <a href="security.html"><i>04</i>Security</a>
+      <a href="customers.html"><i>05</i>Customers</a>
+      <a href="changelog.html"><i>06</i>Changelog</a>
+    </nav>
+    <a class="btn btn--lime menu__cta" href="book.html"><span>Book a walkthrough</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <p class="mono menu__foot">Rotterdam · New York</p>
+  </div>
+</div>
+<!--/@menu-->
+
+<main id="main">
+
+<!-- ───────── HEAD ───────── -->
+<section class="ph ph--pricing" data-hdr-theme="light">
+  <div class="ph__k mono"><span>(Pricing)</span><span class="hide-sm">USD · per workspace · viewers always free</span></div>
+  <h1 class="ph__title" aria-label="Pay for questions, not for logins.">
+    <span class="hl"><span>Pay for questions,</span></span>
+    <span class="hl"><span>not for <em>logins.</em></span></span>
+  </h1>
+  <div class="ph__side">
+    <p class="ph__lead">One flat fee covers ten people who ask and five thousand questions a month. Past that you pay for questions, at a price that falls as you ask more. Anyone who only reads a shared answer is free, forever.</p>
+    <div class="bill" role="group" aria-label="Billing period">
+      <button class="bill__b is-on" type="button" data-bill="m" aria-pressed="true">Monthly</button>
+      <button class="bill__b" type="button" data-bill="a" aria-pressed="false">Annual <small class="mono">10 for 12</small></button>
+      <i class="bill__thumb" aria-hidden="true"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── PLANS ───────── -->
+<section class="plans" id="plans" data-hdr-theme="light">
+  <article class="plan plan--sand" data-reveal>
+    <p class="plan__tag mono"><span>01</span>Sandbox</p>
+    <p class="plan__price"><b>$0</b><span class="mono">no card, no end date</span></p>
+    <p class="plan__lead">One workspace, to find out whether your schema survives a plain-English question.</p>
+    <ul class="plan__list">
+      <li>3 asking seats, unlimited viewers</li>
+      <li>300 questions a month</li>
+      <li>2 sources, read-only</li>
+      <li>SQL and a receipt with every answer</li>
+      <li>7 days of question history</li>
+    </ul>
+    <a class="link-u" href="book.html">Open the sample workspace</a>
+  </article>
+
+  <article class="plan plan--work dk" data-reveal>
+    <div class="plan__top">
+      <p class="plan__tag mono"><span>02</span>Workspace</p>
+      <span class="plan__flag mono">Where most teams land</span>
+    </div>
+    <p class="plan__price"><b id="pWork" data-m="890" data-a="742">$890</b><span class="mono" id="pWorkNote">per month, billed monthly</span></p>
+    <p class="plan__lead">Everything a product and growth team needs to stop queueing for numbers. Analysts keep the semantic layer; everyone else keeps moving.</p>
+    <dl class="plan__inc">
+      <div><dt class="mono">Askers</dt><dd>10</dd></div>
+      <div><dt class="mono">Questions / mo</dt><dd>5,000</dd></div>
+      <div><dt class="mono">Sources</dt><dd>15</dd></div>
+    </dl>
+    <ul class="plan__list">
+      <li>Semantic layer in git, with a review workflow</li>
+      <li>Scheduled posts to Slack and Docs</li>
+      <li>50 dashboards and a read API</li>
+      <li>SAML SSO, row-level permissions inherited</li>
+      <li>1-year audit log with CSV export</li>
+      <li>Email support, answered by the next business day</li>
+      <li>SOC 2 Type II report under NDA</li>
+    </ul>
+    <div class="plan__act">
+      <a class="btn btn--lime" href="book.html"><span>Book a walkthrough</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <p class="plan__fine mono">Past the allowance: $45 per extra asker, $0.12 a question, falling to $0.07.</p>
+  </article>
+
+  <article class="plan plan--ent" data-reveal>
+    <i class="tick tick--tl"></i><i class="tick tick--tr"></i><i class="tick tick--bl"></i><i class="tick tick--br"></i>
+    <p class="plan__tag mono"><span>03</span>Enterprise</p>
+    <p class="plan__price plan__price--q"><b>Quoted</b></p>
+    <p class="plan__lead">For regulated teams and very large question volumes. We price it after the walkthrough, once we know your regions, volume and review process.</p>
+    <ul class="plan__list">
+      <li>Single-tenant region in Frankfurt or Oregon</li>
+      <li>Customer-managed encryption keys</li>
+      <li>SCIM, SIEM log streaming, private connectivity</li>
+      <li>Named engineer, one-hour response</li>
+      <li>Your security questionnaire, answered by a person within a week</li>
+    </ul>
+    <a class="btn btn--ink" href="book.html"><span>Talk to us</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </article>
+</section>
+
+<!-- ───────── CALCULATOR ───────── -->
+<section class="calc" id="calc" data-hdr-theme="light">
+  <div class="calc__l">
+    <div class="sec-label mono"><span>(01)</span><span>The maths</span></div>
+    <h2 class="h2" data-split="lines">Estimate your month.</h2>
+    <p class="calc__sub">Two sliders and a formula we are happy to print. If your number surprises you, it surprised us first. Say so at the walkthrough and we will look at it together.</p>
+    <dl class="formula mono" aria-label="The pricing formula">
+      <div><dt>Workspace fee</dt><dd>$890</dd></div>
+      <div><dt>Asking seats over 10</dt><dd>n × $45</dd></div>
+      <div><dt>Questions 5,001 – 25,000</dt><dd>q × $0.12</dd></div>
+      <div><dt>Questions over 25,000</dt><dd>q × $0.07</dd></div>
+      <div><dt>Viewers</dt><dd>$0</dd></div>
+      <div><dt>Annual billing</dt><dd>total × 10 / 12</dd></div>
+    </dl>
+    <p class="calc__note mono">List price. Enterprise contracts replace this formula with a committed volume.</p>
+  </div>
+
+  <div class="calc__r">
+    <div class="cpanel dk" id="cpanel">
+      <div class="cpanel__bar mono"><span>Workspace · list price</span><span id="cFit" class="cfit"><i></i><b>Workspace</b></span></div>
+      <div class="cpanel__in">
+        <div class="rngs">
+        <div class="rng" style="--p:.5">
+          <div class="rng__top"><label class="mono" for="rq">Questions per month</label><output id="oq" for="rq">5,000</output></div>
+          <input id="rq" type="range" min="0" max="1000" step="1" value="570" aria-describedby="rqh">
+          <div class="rng__ticks mono" id="rqh" aria-hidden="true"><span>100</span><span>1,000</span><span>10,000</span><span>100,000</span></div>
+        </div>
+        <div class="rng" style="--p:.07">
+          <div class="rng__top"><label class="mono" for="rs">Asking seats</label><output id="os" for="rs">10</output></div>
+          <input id="rs" type="range" min="1" max="120" step="1" value="10">
+          <div class="rng__ticks mono" aria-hidden="true"><span>1</span><span>30</span><span>60</span><span>90</span><span>120</span></div>
+        </div>
+
+        </div>
+
+        <div class="ledger" id="ledger" aria-live="polite"></div>
+        <div class="mix" id="mix" aria-hidden="true"></div>
+
+        <div class="total">
+          <div class="total__main">
+            <span class="mono total__k" id="tK">Estimated, billed monthly</span>
+            <b class="total__n" id="tot">$890</b><span class="total__u mono">/ month</span>
+          </div>
+          <dl class="total__side">
+            <div><dt class="mono">Billed annually</dt><dd id="tAnn">$742 / month</dd></div>
+            <div><dt class="mono">Per question</dt><dd id="tPer">$0.18</dd></div>
+          </dl>
+        </div>
+        <p class="cpanel__msg mono" id="cMsg">Inside the allowance. Nothing extra to pay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── COMPARISON ───────── -->
+<section class="cmpwrap" id="compare" data-hdr-theme="light">
+  <div class="cmp__head">
+    <div class="sec-label mono"><span>(02)</span><span>Side by side</span></div>
+    <h2 class="h2" data-split="lines">Everything, in one table.</h2>
+  </div>
+  <div class="cmp" role="table" aria-label="Plan comparison">
+    <div class="cmp__row cmp__row--head mono" role="row">
+      <span role="columnheader">Feature</span><span role="columnheader">Sandbox</span><span role="columnheader" class="is-hl">Workspace</span><span role="columnheader">Enterprise</span>
+    </div>
+<!--@cmp-->
+    <div class="cmp__grp mono" role="row"><span>Usage</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Monthly price</span><span class="cmp__c" role="cell" data-l="Sandbox">$0</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">$890</span><span class="cmp__c" role="cell" data-l="Enterprise">Quoted</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Asking seats included</span><span class="cmp__c" role="cell" data-l="Sandbox">3</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">10</span><span class="cmp__c" role="cell" data-l="Enterprise">Agreed per contract</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Extra asking seat</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="no" aria-label="Not included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace">$45 / month</span><span class="cmp__c" role="cell" data-l="Enterprise">Included</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Viewers who only read answers</span><span class="cmp__c" role="cell" data-l="Sandbox">Unlimited</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">Unlimited</span><span class="cmp__c" role="cell" data-l="Enterprise">Unlimited</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Questions per month</span><span class="cmp__c" role="cell" data-l="Sandbox">300</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">5,000</span><span class="cmp__c" role="cell" data-l="Enterprise">Committed volume</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Questions past the allowance</span><span class="cmp__c" role="cell" data-l="Sandbox">Paused until next month</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">$0.12, then $0.07 over 25,000</span><span class="cmp__c" role="cell" data-l="Enterprise">Priced into the commit</span></div>
+    <div class="cmp__grp mono" role="row"><span>Data</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Sources connected</span><span class="cmp__c" role="cell" data-l="Sandbox">2</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">15</span><span class="cmp__c" role="cell" data-l="Enterprise">Unlimited</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Residency</span><span class="cmp__c" role="cell" data-l="Sandbox">EU or US</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">EU or US</span><span class="cmp__c" role="cell" data-l="Enterprise">Single-tenant region</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Semantic layer in git</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="yes" aria-label="Included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace"><i class="yes" aria-label="Included"></i></span><span class="cmp__c" role="cell" data-l="Enterprise"><i class="yes" aria-label="Included"></i></span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Review workflow for metric changes</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="no" aria-label="Not included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace"><i class="yes" aria-label="Included"></i></span><span class="cmp__c" role="cell" data-l="Enterprise"><i class="yes" aria-label="Included"></i><em>two-person rule</em></span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Result cache</span><span class="cmp__c" role="cell" data-l="Sandbox">24 hours</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">24 hours</span><span class="cmp__c" role="cell" data-l="Enterprise">24 hours, or off</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Question history</span><span class="cmp__c" role="cell" data-l="Sandbox">7 days</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">Until you delete it</span><span class="cmp__c" role="cell" data-l="Enterprise">Until you delete it</span></div>
+    <div class="cmp__grp mono" role="row"><span>Answers</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">SQL, reasoning and a receipt with every answer</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="yes" aria-label="Included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace"><i class="yes" aria-label="Included"></i></span><span class="cmp__c" role="cell" data-l="Enterprise"><i class="yes" aria-label="Included"></i></span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Scheduled posts to Slack and Docs</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="no" aria-label="Not included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace"><i class="yes" aria-label="Included"></i></span><span class="cmp__c" role="cell" data-l="Enterprise"><i class="yes" aria-label="Included"></i></span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Dashboards</span><span class="cmp__c" role="cell" data-l="Sandbox">2</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">50</span><span class="cmp__c" role="cell" data-l="Enterprise">Unlimited</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Read API</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="no" aria-label="Not included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace"><i class="yes" aria-label="Included"></i></span><span class="cmp__c" role="cell" data-l="Enterprise"><i class="yes" aria-label="Included"></i></span></div>
+    <div class="cmp__grp mono" role="row"><span>Governance</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Read-only grants checked on every connect</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="yes" aria-label="Included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace"><i class="yes" aria-label="Included"></i></span><span class="cmp__c" role="cell" data-l="Enterprise"><i class="yes" aria-label="Included"></i></span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Row-level permissions inherited from the warehouse</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="yes" aria-label="Included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace"><i class="yes" aria-label="Included"></i></span><span class="cmp__c" role="cell" data-l="Enterprise"><i class="yes" aria-label="Included"></i></span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">SAML SSO</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="no" aria-label="Not included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace"><i class="yes" aria-label="Included"></i></span><span class="cmp__c" role="cell" data-l="Enterprise"><i class="yes" aria-label="Included"></i></span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">SCIM provisioning</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="no" aria-label="Not included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace"><i class="no" aria-label="Not included"></i></span><span class="cmp__c" role="cell" data-l="Enterprise"><i class="yes" aria-label="Included"></i></span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Audit log</span><span class="cmp__c" role="cell" data-l="Sandbox">30 days in app</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">1 year, CSV export</span><span class="cmp__c" role="cell" data-l="Enterprise">Unlimited, streamed to your SIEM</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Customer-managed encryption keys</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="no" aria-label="Not included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace"><i class="no" aria-label="Not included"></i></span><span class="cmp__c" role="cell" data-l="Enterprise"><i class="yes" aria-label="Included"></i></span></div>
+    <div class="cmp__grp mono" role="row"><span>Support</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Support</span><span class="cmp__c" role="cell" data-l="Sandbox">Docs and community</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">Email, next business day</span><span class="cmp__c" role="cell" data-l="Enterprise">Named engineer, 1 hour</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Onboarding</span><span class="cmp__c" role="cell" data-l="Sandbox">Self-serve</span><span class="cmp__c is-hl" role="cell" data-l="Workspace">Guided semantic-layer week</span><span class="cmp__c" role="cell" data-l="Enterprise">Dedicated, with security review</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">Uptime commitment</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="no" aria-label="Not included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace">99.9%</span><span class="cmp__c" role="cell" data-l="Enterprise">99.95%, with credits</span></div>
+    <div class="cmp__row" role="row"><span class="cmp__k" role="rowheader">SOC 2 Type II report</span><span class="cmp__c" role="cell" data-l="Sandbox"><i class="no" aria-label="Not included"></i></span><span class="cmp__c is-hl" role="cell" data-l="Workspace">Under NDA</span><span class="cmp__c" role="cell" data-l="Enterprise">Under NDA</span></div>
+<!--/@cmp-->
+  </div>
+</section>
+
+<!-- ───────── ANNUAL ───────── -->
+<section class="annual dk-sec" id="annual" data-hdr-theme="dark">
+  <div class="annual__k mono"><span>(03)</span><span>Annual billing</span></div>
+  <p class="annual__t" data-split="lines">Pay for ten months. Use twelve.</p>
+  <div class="months" id="months" role="img" aria-label="Twelve months, the last two free on annual billing">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="is-free"></i><i class="is-free"></i>
+    <span class="months__l mono">Jan–Oct, invoiced once</span><span class="months__l months__l--free mono">Nov–Dec, on us</span>
+  </div>
+  <ul class="annual__notes">
+    <li><span class="mono">01</span>One invoice, in USD or EUR. EU businesses pay VAT by reverse charge.</li>
+    <li><span class="mono">02</span>Upgrade mid-term and the difference is prorated to the day.</li>
+    <li><span class="mono">03</span>Say no before renewal and it simply stops. We send a reminder 30 days out.</li>
+    <li><span class="mono">04</span>Question and seat overage is billed monthly in arrears, never in advance.</li>
+  </ul>
+</section>
+
+<!-- ───────── FAQ ───────── -->
+<section class="faq" id="faq" data-hdr-theme="light">
+  <div class="faq__left">
+    <div class="sec-label mono"><span>(04)</span><span>Billing</span></div>
+    <h2 class="h2" data-split="lines">Small print, large type.</h2>
+    <p class="faq__sub">The questions finance asks, answered before they ask them.</p>
+  </div>
+  <div class="acc" id="acc">
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">01</span><span>What counts as a question?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>One message you send that Sightline answers. Follow-ups count. Opening a saved answer, refreshing a dashboard or a scheduled Slack post does not: those re-run a query you already paid for.</p></div></div>
+    </div>
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">02</span><span>What happens when we pass 5,000?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>Nothing breaks. Questions keep getting answered, and the extra ones are billed at $0.12 each, dropping to $0.07 after 25,000. The admin gets a note at 80% and again at 100%, so there are no surprises on the invoice.</p></div></div>
+    </div>
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">03</span><span>Who needs an asking seat?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>Only people who type questions. Anyone who opens a shared link, reads a Slack digest or comments on an answer is a viewer, and viewers are unlimited and free. Most teams find about one in four employees ends up asking.</p></div></div>
+    </div>
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">04</span><span>What happens to our workspace if we leave?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>You export the semantic layer as plain YAML from git, and the saved answers with their SQL as a CSV. Then we delete the workspace and send a certificate within 30 days. Your warehouse was never touched, so there is nothing to migrate back.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CTA ───────── -->
+<section class="cta cta--s" data-hdr-theme="dark">
+  <div class="cta__top mono"><span>(05)</span><span>30 min · Mon–Fri</span></div>
+  <h2 class="cta__title" data-split="lines">Do the maths on your schema.</h2>
+  <div class="cta__row">
+    <p class="cta__sub">Thirty minutes, no slides. We price it against your real question volume, not a guess.</p>
+    <a class="cta__btn" href="book.html" data-magnetic="0.4" data-cursor="Book">
+      <span class="cta__btn-in"><span>Book a walkthrough</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!--@foot-->
+<footer class="foot" data-hdr-theme="dark">
+  <div class="foot__grid">
+    <div class="foot__col foot__col--idx">
+      <p class="mono foot__h">Index</p>
+      <a href="index.html#product">Product</a>
+      <a href="index.html#how">How it works</a>
+      <a href="pricing.html" aria-current="page">Pricing</a>
+      <a href="security.html">Security</a>
+      <a href="customers.html">Customers</a>
+      <a href="changelog.html">Changelog</a>
+    </div>
+    <div class="foot__col">
+      <p class="mono foot__h">Talk to us</p>
+      <a href="book.html">Book a walkthrough</a>
+      <a href="pricing.html#calc">Estimate your month</a>
+      <a href="security.html#controls">Read the security sheet</a>
+    </div>
+    <div class="foot__col">
+      <p class="mono foot__h">Offices</p>
+      <p>Rotterdam, Kop van Zuid</p><p>New York, Flatiron</p>
+    </div>
+    <div class="foot__col foot__status">
+      <p class="mono foot__h">Security</p>
+      <p>SOC 2 Type II</p>
+      <p class="mono foot__small">Read-only by design</p>
+    </div>
+  </div>
+  <div class="foot__word" aria-hidden="true">
+    <span>Sightline</span>
+    <i class="foot__line"></i>
+  </div>
+  <div class="foot__base mono">
+    <span>© 2026 Sightline Analytics B.V.</span>
+    <span class="hide-sm">Read-only since day one</span>
+    <button type="button" class="to-top" id="toTop">Back to top</button>
+  </div>
+</footer>
+<!--/@foot-->
+
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/SplitText.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/config.js"></script>
+<script src="../assets/core.js"></script>
+<script src="site.js"></script>
+<script src="pages.js"></script>
+<script src="pricing.js"></script>
+</body></html>

@@ -1,0 +1,267 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changelog — Sightline</title>
+<meta name="description" content="Every Sightline release in order, newest first: what is new, what got better and what we fixed. Currently v38, shipped in Week 39. Nothing here is a roadmap.">
+<meta name="theme-color" content="#f4f4f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0b'/%3E%3Ccircle cx='11' cy='16' r='4.5' fill='%23c8f34b'/%3E%3Cpath d='M11 16h15M26 12v8' stroke='%23c8f34b' stroke-width='2'/%3E%3C/svg%3E">
+<script src="../assets/boot.js"></script>
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/core.css">
+<link rel="stylesheet" href="style.css">
+</head><body class="sl sl--pg" data-page="changelog">
+
+<!--@hdr-->
+<header class="hdr" data-hdr data-theme="light">
+  <a class="brand" href="index.html" aria-label="Sightline, home">
+    <svg class="brand__mark" viewBox="0 0 30 20" aria-hidden="true"><circle cx="7" cy="10" r="5"/><path d="M7 10h21M28 5v10"/></svg>
+    <span>Sightline</span>
+  </a>
+  <nav class="hdr__nav" aria-label="Primary">
+    <a href="index.html#product">Product</a>
+    <a href="index.html#how">How it works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="security.html">Security</a>
+    <a href="customers.html">Customers</a>
+    <a href="changelog.html" aria-current="page">Changelog</a>
+  </nav>
+  <div class="hdr__end">
+    <a class="hdr__cta" href="book.html"><i class="hdr__dot"></i><span>Book a walkthrough</span></a>
+    <button class="hdr__burger" type="button" data-menu aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
+  </div>
+</header>
+<!--/@hdr-->
+
+<!--@menu-->
+<div class="menu" data-menu-panel>
+  <div class="menu__in">
+    <span class="mono menu__label">Menu</span>
+    <nav class="menu__nav" aria-label="Mobile">
+      <a href="index.html#product"><i>01</i>Product</a>
+      <a href="index.html#how"><i>02</i>How it works</a>
+      <a href="pricing.html"><i>03</i>Pricing</a>
+      <a href="security.html"><i>04</i>Security</a>
+      <a href="customers.html"><i>05</i>Customers</a>
+      <a href="changelog.html" aria-current="page"><i>06</i>Changelog</a>
+    </nav>
+    <a class="btn btn--lime menu__cta" href="book.html"><span>Book a walkthrough</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <p class="mono menu__foot">Rotterdam · New York</p>
+  </div>
+</div>
+<!--/@menu-->
+
+<main id="main">
+
+<!-- ───────── HEAD ───────── -->
+<section class="ph ph--log" data-hdr-theme="light">
+  <div class="ph__k mono"><span>(Changelog)</span><span class="hide-sm">Current: v38 · Week 39</span></div>
+  <h1 class="ph__title" aria-label="Shipped, in order.">
+    <span class="hl"><span>Shipped,</span></span>
+    <span class="hl"><span>in <em>order.</em></span></span>
+  </h1>
+  <div class="ph__side">
+    <p class="ph__lead">Every release since Week 22, newest first. Nothing on this page is a roadmap: if it is here, it is in your workspace.</p>
+  </div>
+</section>
+
+<!-- ───────── LIST ───────── -->
+<section class="clog" id="log" data-hdr-theme="light">
+  <div class="clog__bar" id="clogBar">
+    <div class="clog__chips" id="clogChips" role="group" aria-label="Filter by type"></div>
+    <button class="clog__all mono" type="button" id="clogAll" aria-pressed="false">Expand all</button>
+  </div>
+  <div class="clog__list" id="clogList">
+<!--@clog-->
+    <section class="rel" id="v38" data-v="38">
+      <div class="rel__v"><b>v38</b><span class="mono">Week 39</span><em class="mono rel__latest">Latest</em></div>
+      <div class="rel__list">
+        <article class="ent is-open" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="true"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Receipts on every number</b><span>Click any figure in a digest, dashboard or shared link and see the query that made it.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>A receipt shows the metric definition, the source table, rows scanned, runtime and freshness. It is the same record the audit log keeps, so the number on screen and the number in the log can never drift apart. If Sightline cannot show its working, it no longer shows the figure.</p><ul class="ent__aff mono"><li>Answers</li><li>Slack</li><li>Dashboards</li></ul></div></div></article>
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>Median answer time, 4.6 s to 4.1 s</b><span>The planner now caches semantic-layer lookups per workspace.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Most of the saved half second was the planner re-reading metric definitions it had read a minute earlier. The cache invalidates the moment an analyst merges a change, so definitions are never stale.</p><p class="ent__stat"><span class="mono">4.6 s</span><svg class="ar" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg><b>4.1 s</b></p><ul class="ent__aff mono"><li>Planner</li></ul></div></div></article>
+        <article class="ent" data-t="fixed"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--fixed"></i>Fixed</span><span class="ent__t"><b>Weekly posts an hour late after clock changes</b><span>Schedules west of UTC-8 landed an hour off when daylight saving began.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Schedules are now stored as a local time plus a zone name, not a fixed offset. Affected workspaces were corrected without anyone needing to re-save their schedules.</p><ul class="ent__aff mono"><li>Schedules</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v37" data-v="37">
+      <div class="rel__v"><b>v37</b><span class="mono">Week 38</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Scan budgets</b><span>Admins set how much a single query may scan. Anything bigger waits for approval.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>A budget is set per workspace and can be overridden per source. The asker sees the estimate before the query runs, and the approver sees the SQL. Queries inside the budget are unaffected.</p><ul class="ent__aff mono"><li>Governance</li><li>Connectors</li></ul></div></div></article>
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>ClickHouse planning on wide tables</b><span>The connector reads partition metadata instead of sampling rows.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Planning on tables with more than 400 columns is 3.1 times faster, and the generated SQL now prunes partitions on the first attempt.</p><p class="ent__stat"><span class="mono">2.7 s</span><svg class="ar" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg><b>0.9 s</b></p><ul class="ent__aff mono"><li>Connectors</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v36" data-v="36">
+      <div class="rel__v"><b>v36</b><span class="mono">Week 37</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Ask inside Slack threads</b><span>Mention Sightline in a thread and it answers using the thread as context.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>If a thread is already discussing a metric, Sightline reads the last twenty messages for definitions and filters before it plans. It posts the answer in the thread and keeps the receipt one click away.</p><ul class="ent__aff mono"><li>Slack</li></ul></div></div></article>
+        <article class="ent" data-t="fixed"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--fixed"></i>Fixed</span><span class="ent__t"><b>Double-clicking Send asked the question twice</b><span>The second click is now ignored until the first answer starts.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Both answers used to appear, and both counted towards your question allowance. Duplicates from the last 30 days were credited back automatically.</p><ul class="ent__aff mono"><li>App</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v35" data-v="35">
+      <div class="rel__v"><b>v35</b><span class="mono">Week 36</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>Semantic-layer diff view</b><span>Review a metric change as a side-by-side diff, with the answers it would change.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Analysts now see the old and new SQL next to each other, plus the five most-asked questions whose results would move, with the before and after values.</p><ul class="ent__aff mono"><li>Semantic layer</li></ul></div></div></article>
+        <article class="ent" data-t="fixed"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--fixed"></i>Fixed</span><span class="ent__t"><b>CSV export dropped the final row</b><span>Result sets of exactly 10,000 rows lost their last line.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>An off-by-one in the export paginator. It affected 14 workspaces, all of whom were told directly and given a corrected export.</p><ul class="ent__aff mono"><li>Export</li></ul></div></div></article>
+        <article class="ent" data-t="fixed"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--fixed"></i>Fixed</span><span class="ent__t"><b>Fiscal quarters in 4-4-5 calendars</b><span>“Last quarter” was off by one week for retail-style calendars.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>The semantic layer now accepts a calendar definition. Existing workspaces were migrated, and the old behaviour is preserved where an analyst had already worked around it.</p><ul class="ent__aff mono"><li>Semantic layer</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v34" data-v="34">
+      <div class="rel__v"><b>v34</b><span class="mono">Week 35</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Small-group suppression</b><span>On sensitive tables, groups under five people are left out of answers.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Switch it on per table in the semantic layer. Suppressed groups are named in the answer, so nobody wonders why the numbers do not add up.</p><ul class="ent__aff mono"><li>Governance</li></ul></div></div></article>
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>Charts remember your colours</b><span>A series keeps its colour across questions, dashboards and Slack posts.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Pick “Enterprise” as blue once and it stays blue everywhere it appears. Colours are stored on the metric, not on the chart.</p><ul class="ent__aff mono"><li>Charts</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v33" data-v="33">
+      <div class="rel__v"><b>v33</b><span class="mono">Week 34</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Read API, generally available</b><span>Fetch any saved answer as JSON, with the SQL and its receipt.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Tokens are scoped to a workspace and a role, and every call is written to the audit log. Rate limits are 600 requests a minute, and answers cached within 24 hours are free.</p><ul class="ent__aff mono"><li>API</li></ul></div></div></article>
+        <article class="ent" data-t="fixed"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--fixed"></i>Fixed</span><span class="ent__t"><b>BigQuery jobs queued behind slot reservations</b><span>Jobs now report their queue time instead of timing out.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>The connector waited on the reservation as if it were query runtime. It now shows queued time separately and keeps the job alive for up to ten minutes.</p><ul class="ent__aff mono"><li>Connectors</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v32" data-v="32">
+      <div class="rel__v"><b>v32</b><span class="mono">Week 33</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>Ambiguity prompts remember your choice</b><span>If a question could mean two metrics, Sightline asks once, then remembers for 30 days.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>The choice is stored per person, not per workspace, and is visible in the receipt. Analysts can see which ambiguities come up most and fix them at the source.</p><ul class="ent__aff mono"><li>Planner</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v31" data-v="31">
+      <div class="rel__v"><b>v31</b><span class="mono">Week 32</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Customer-managed keys</b><span>Bring your own encryption key. Revoke it and the workspace becomes unreadable.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Keys live in your key-management service. Sightline holds a wrapped data key and never the key itself. Revocation takes effect within minutes, not at the next rotation.</p><ul class="ent__aff mono"><li>Security</li></ul></div></div></article>
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>SSO sign-in keeps deep links</b><span>Opening a shared answer while signed out now lands on that answer.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>The link survives the round trip through your identity provider, including when the answer belongs to a different workspace than your last one.</p><ul class="ent__aff mono"><li>Identity</li></ul></div></div></article>
+        <article class="ent" data-t="fixed"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--fixed"></i>Fixed</span><span class="ent__t"><b>Stale cache after reconnecting a source</b><span>Answers served from the 24-hour cache after a credential change are now discarded.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Rotating a read-only credential now clears the cache for that source immediately.</p><ul class="ent__aff mono"><li>Connectors</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v30" data-v="30">
+      <div class="rel__v"><b>v30</b><span class="mono">Week 31</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Dashboard sections</b><span>Group tiles under named headings and collapse what you are not using.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Sections have their own permissions, so a finance block can be visible to six people while the rest of the dashboard is open to everyone.</p><ul class="ent__aff mono"><li>Dashboards</li></ul></div></div></article>
+      </div>
+    </section>
+    <div class="rel-break" data-brk><p>Most weeks ship a fix nobody noticed.</p><span class="mono">Nine more releases below</span></div>
+    <section class="rel" id="v29" data-v="29">
+      <div class="rel__v"><b>v29</b><span class="mono">Week 30</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>Answers say which filters they applied</b><span>“Internal and test accounts excluded” is now stated in the answer, not buried in the SQL.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Every implicit filter from the semantic layer is listed under the sentence, with the metric file that defines it. Click one to see the definition.</p><ul class="ent__aff mono"><li>Answers</li></ul></div></div></article>
+        <article class="ent" data-t="fixed"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--fixed"></i>Fixed</span><span class="ent__t"><b>Sparklines blank in digests on one Slack client</b><span>Digest charts rendered as empty boxes on the Android Slack client.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Charts are now rendered as images with a text fallback that carries the numbers.</p><ul class="ent__aff mono"><li>Slack</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v28" data-v="28">
+      <div class="rel__v"><b>v28</b><span class="mono">Week 29</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Docs embeds</b><span>Put a live answer inside a Docs page and it keeps itself up to date.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Embeds show the receipt on hover and respect the viewer’s permissions, so a number a reader may not see is replaced by a lock, not by a stale value.</p><ul class="ent__aff mono"><li>Docs</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v27" data-v="27">
+      <div class="rel__v"><b>v27</b><span class="mono">Week 28</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>Audit-log streaming latency</b><span>Entries reach your SIEM in a median of 6 seconds, down from 40.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>We moved from batched delivery to a per-entry queue. Ordering is preserved, and each entry carries a sequence number so gaps are detectable.</p><p class="ent__stat"><span class="mono">40 s</span><svg class="ar" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg><b>6 s</b></p><ul class="ent__aff mono"><li>Security</li></ul></div></div></article>
+        <article class="ent" data-t="fixed"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--fixed"></i>Fixed</span><span class="ent__t"><b>Question history search ignored accents</b><span>Searching “cafe” now finds “café”.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Search is accent- and case-insensitive across question history, saved answers and metric names.</p><ul class="ent__aff mono"><li>App</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v26" data-v="26">
+      <div class="rel__v"><b>v26</b><span class="mono">Week 27</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>SCIM groups map to roles</b><span>Directory groups assign Admin, Analyst, Asker and Viewer roles automatically.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Add someone to the group in your identity provider and their role changes within a minute. Remove them and access ends in the same minute.</p><ul class="ent__aff mono"><li>Identity</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v25" data-v="25">
+      <div class="rel__v"><b>v25</b><span class="mono">Week 26</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>Postgres schema mapping</b><span>A 212-table schema is mapped in 40 seconds instead of six minutes.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>The connector reads catalog tables once and infers joins from foreign keys and from the last 90 days of query history, instead of probing every pair.</p><p class="ent__stat"><span class="mono">6 min</span><svg class="ar" viewBox="0 0 60 24" aria-hidden="true"><path d="M2 12h54M46 4l10 8-10 8"/></svg><b>40 s</b></p><ul class="ent__aff mono"><li>Connectors</li></ul></div></div></article>
+        <article class="ent" data-t="fixed"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--fixed"></i>Fixed</span><span class="ent__t"><b>Metric names with trailing spaces broke YAML export</b><span>Names are trimmed on save and on import.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Four workspaces had metrics that exported but could not be re-imported. All four were repaired.</p><ul class="ent__aff mono"><li>Semantic layer</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v24" data-v="24">
+      <div class="rel__v"><b>v24</b><span class="mono">Week 25</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Saved answers get owners</b><span>Every saved answer has a named owner who is asked before it is archived.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Owners get a short note when an answer has not been opened for 90 days. One click keeps it, and one click archives it.</p><ul class="ent__aff mono"><li>Answers</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v23" data-v="23">
+      <div class="rel__v"><b>v23</b><span class="mono">Week 24</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>Funnels infer step order</b><span>Funnel questions work out the order of events from their timestamps.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>You no longer have to name the steps in sequence. Sightline checks the order against the last 30 days of data and tells you when events arrive out of order.</p><ul class="ent__aff mono"><li>Planner</li></ul></div></div></article>
+        <article class="ent" data-t="fixed"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--fixed"></i>Fixed</span><span class="ent__t"><b>Scheduled posts stopped after a channel rename</b><span>Renaming a Slack channel no longer detaches its schedules.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Schedules now follow the channel’s ID, not its name.</p><ul class="ent__aff mono"><li>Slack</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v22" data-v="22">
+      <div class="rel__v"><b>v22</b><span class="mono">Week 23</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Metric definitions in git</b><span>Every metric lives in a file, and every change goes through review.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>The first release of the semantic layer as code: YAML files, branches, pull requests and a diff of what a change would do to existing answers.</p><ul class="ent__aff mono"><li>Semantic layer</li></ul></div></div></article>
+        <article class="ent" data-t="improved"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--improved"></i>Improved</span><span class="ent__t"><b>Time to first dashboard</b><span>New workspaces now create a starter dashboard from your most-asked three questions.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>It used to wait for a manual click. 71% of new workspaces now have a dashboard on day one.</p><ul class="ent__aff mono"><li>Dashboards</li></ul></div></div></article>
+      </div>
+    </section>
+    <section class="rel" id="v21" data-v="21">
+      <div class="rel__v"><b>v21</b><span class="mono">Week 22</span></div>
+      <div class="rel__list">
+        <article class="ent" data-t="new"><h3><button class="ent__h" type="button" aria-expanded="false"><span class="ent__tag tag"><i class="tg tg--new"></i>New</span><span class="ent__t"><b>Row-level permissions inherited</b><span>Queries run under the asker’s own warehouse role where the source supports it.</span></span><i class="acc__x" aria-hidden="true"></i></button></h3><div class="ent__a"><div><p>Postgres row-level policies and BigQuery authorised views are respected automatically. The audit log records which role ran each query.</p><ul class="ent__aff mono"><li>Governance</li></ul></div></div></article>
+      </div>
+    </section>
+<!--/@clog-->
+    <p class="ctls__empty" id="clogEmpty" hidden>No releases of that kind. Pick another filter.</p>
+  </div>
+</section>
+
+<!-- ───────── CTA ───────── -->
+<section class="cta cta--s" data-hdr-theme="dark">
+  <div class="cta__top mono"><span>(Next)</span><span>Read by a person, every Friday</span></div>
+  <h2 class="cta__title" data-split="lines">Something missing?</h2>
+  <div class="cta__row">
+    <p class="cta__sub">Say so in the walkthrough. Three of the last ten releases started as a sentence on a call.</p>
+    <a class="cta__btn" href="book.html" data-magnetic="0.4" data-cursor="Book">
+      <span class="cta__btn-in"><span>Book a walkthrough</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!--@foot-->
+<footer class="foot" data-hdr-theme="dark">
+  <div class="foot__grid">
+    <div class="foot__col foot__col--idx">
+      <p class="mono foot__h">Index</p>
+      <a href="index.html#product">Product</a>
+      <a href="index.html#how">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="security.html">Security</a>
+      <a href="customers.html">Customers</a>
+      <a href="changelog.html" aria-current="page">Changelog</a>
+    </div>
+    <div class="foot__col">
+      <p class="mono foot__h">Talk to us</p>
+      <a href="book.html">Book a walkthrough</a>
+      <a href="pricing.html#calc">Estimate your month</a>
+      <a href="security.html#controls">Read the security sheet</a>
+    </div>
+    <div class="foot__col">
+      <p class="mono foot__h">Offices</p>
+      <p>Rotterdam, Kop van Zuid</p><p>New York, Flatiron</p>
+    </div>
+    <div class="foot__col foot__status">
+      <p class="mono foot__h">Security</p>
+      <p>SOC 2 Type II</p>
+      <p class="mono foot__small">Read-only by design</p>
+    </div>
+  </div>
+  <div class="foot__word" aria-hidden="true">
+    <span>Sightline</span>
+    <i class="foot__line"></i>
+  </div>
+  <div class="foot__base mono">
+    <span>© 2026 Sightline Analytics B.V.</span>
+    <span class="hide-sm">Read-only since day one</span>
+    <button type="button" class="to-top" id="toTop">Back to top</button>
+  </div>
+</footer>
+<!--/@foot-->
+
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/SplitText.min.js"></script>
+<script src="../assets/vendor/Flip.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/config.js"></script>
+<script src="../assets/core.js"></script>
+<script src="site.js"></script>
+<script src="pages.js"></script>
+<script src="changelog.js"></script>
+</body></html>

@@ -1,0 +1,204 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a walkthrough — Sightline</title>
+<meta name="description" content="Book a 30-minute Sightline walkthrough on a read-only sandbox of your own data. Bring the question your dashboard can’t answer.">
+<meta name="theme-color" content="#f4f4f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0b'/%3E%3Ccircle cx='11' cy='16' r='4.5' fill='%23c8f34b'/%3E%3Cpath d='M11 16h15M26 12v8' stroke='%23c8f34b' stroke-width='2'/%3E%3C/svg%3E">
+<script src="../assets/boot.js"></script>
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/core.css">
+<link rel="stylesheet" href="style.css">
+</head><body class="sl sl--book">
+
+<!--@hdr-->
+<header class="hdr" data-hdr data-theme="light">
+  <a class="brand" href="index.html" aria-label="Sightline, home">
+    <svg class="brand__mark" viewBox="0 0 30 20" aria-hidden="true"><circle cx="7" cy="10" r="5"/><path d="M7 10h21M28 5v10"/></svg>
+    <span>Sightline</span>
+  </a>
+  <nav class="hdr__nav" aria-label="Primary">
+    <a href="index.html#product">Product</a>
+    <a href="index.html#how">How it works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="security.html">Security</a>
+    <a href="customers.html">Customers</a>
+    <a href="changelog.html">Changelog</a>
+  </nav>
+  <div class="hdr__end">
+    <a class="hdr__back" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>Back to product</span></a>
+    <button class="hdr__burger" type="button" data-menu aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
+  </div>
+</header>
+<!--/@hdr-->
+
+<!--@menu-->
+<div class="menu" data-menu-panel>
+  <div class="menu__in">
+    <span class="mono menu__label">Menu</span>
+    <nav class="menu__nav" aria-label="Mobile">
+      <a href="index.html#product"><i>01</i>Product</a>
+      <a href="index.html#how"><i>02</i>How it works</a>
+      <a href="pricing.html"><i>03</i>Pricing</a>
+      <a href="security.html"><i>04</i>Security</a>
+      <a href="customers.html"><i>05</i>Customers</a>
+      <a href="changelog.html"><i>06</i>Changelog</a>
+    </nav>
+    <a class="btn btn--lime menu__cta" href="book.html" aria-current="page"><span>Book a walkthrough</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <p class="mono menu__foot">Rotterdam · New York</p>
+  </div>
+</div>
+<!--/@menu-->
+
+<main class="book" id="main" data-hdr-theme="light">
+
+  <aside class="book__aside" aria-label="What to expect">
+    <div class="book__aside-in">
+      <p class="mono book__k" data-in><span>(Walkthrough)</span><span>30 min · video call</span></p>
+      <h1 class="book__title" aria-label="Bring a question. Leave with the answer.">
+        <span class="hl"><span>Bring a question.</span></span>
+        <span class="hl"><span>Leave with</span></span>
+        <span class="hl"><span>the answer.</span></span>
+      </h1>
+      <p class="book__lead" data-in>A walkthrough on a read-only sandbox of your own data, or on Halden’s sample workspace if your security team wants a week first. No slides.</p>
+
+      <ol class="agenda" data-in>
+        <li><span class="mono">00:00</span><p>We connect a read-only sandbox, or open the sample workspace.</p></li>
+        <li><span class="mono">00:06</span><p>You ask the questions your dashboards can’t answer.</p></li>
+        <li><span class="mono">00:20</span><p>We open the SQL, the semantic layer and the audit log.</p></li>
+        <li><span class="mono">00:30</span><p>You keep the workspace for 14 days. No card, no seat count.</p></li>
+      </ol>
+
+      <figure class="book__quote" data-in>
+        <blockquote>“We booked it to prove it wouldn’t work on our schema. It worked on our schema.”</blockquote>
+        <figcaption class="mono"><b>Tomás Reyes</b> Group PM, Pallet</figcaption>
+      </figure>
+
+      <p class="book__facts mono" data-in><span><i></i>SOC 2 Type II</span><span><i></i>Read-only</span><span><i></i>EU or US residency</span></p>
+    </div>
+  </aside>
+
+  <section class="book__main">
+    <form class="bform" id="bookForm" data-demo novalidate>
+      <div class="bform__head" data-ok-hide data-in>
+        <p class="mono book__k"><span>(Book)</span><span>Takes about a minute</span></p>
+        <h2 class="bform__title">Book a walkthrough</h2>
+      </div>
+
+      <fieldset class="fs" data-ok-hide data-in>
+        <legend class="fs__lg"><span class="mono">01</span>You</legend>
+        <div class="fs__row2">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required minlength="2">
+            <span class="err mono">We’ll need a name to put on the invite.</span>
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required inputmode="email">
+            <span class="err mono">That doesn’t look like an email address.</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fs" data-ok-hide data-in>
+        <legend class="fs__lg"><span class="mono">02</span>Team size</legend>
+        <div class="chips" role="radiogroup">
+          <label class="pchip"><input type="radio" name="team" value="1–10" required><span>1–10</span></label>
+          <label class="pchip"><input type="radio" name="team" value="11–50"><span>11–50</span></label>
+          <label class="pchip"><input type="radio" name="team" value="51–200"><span>51–200</span></label>
+          <label class="pchip"><input type="radio" name="team" value="201–1,000"><span>201–1,000</span></label>
+          <label class="pchip"><input type="radio" name="team" value="1,000+"><span>1,000+</span></label>
+        </div>
+        <span class="err mono">Pick the closest one. Nobody checks.</span>
+      </fieldset>
+
+      <fieldset class="fs" id="fsMeasure" data-ok-hide data-in>
+        <legend class="fs__lg"><span class="mono">03</span>What do you want to measure?</legend>
+        <div class="chips">
+          <label class="pchip mchip"><input type="checkbox" name="topics" value="Activation"><span>Activation</span></label>
+          <label class="pchip mchip"><input type="checkbox" name="topics" value="Churn &amp; retention"><span>Churn &amp; retention</span></label>
+          <label class="pchip mchip"><input type="checkbox" name="topics" value="Trial-to-paid"><span>Trial-to-paid</span></label>
+          <label class="pchip mchip"><input type="checkbox" name="topics" value="Revenue (MRR, NRR)"><span>Revenue (MRR, NRR)</span></label>
+          <label class="pchip mchip"><input type="checkbox" name="topics" value="Feature adoption"><span>Feature adoption</span></label>
+          <label class="pchip mchip"><input type="checkbox" name="topics" value="Funnel drop-off"><span>Funnel drop-off</span></label>
+        </div>
+        <div class="field field--area">
+          <label for="measure">The question you’ve been waiting on <em>(optional if you picked a topic)</em></label>
+          <textarea id="measure" name="measure" rows="3" maxlength="400" placeholder="e.g. Why do EU trials convert better than US ones?"></textarea>
+        </div>
+        <span class="err mono">Pick a topic or write the question. Either works.</span>
+      </fieldset>
+
+      <fieldset class="fs" id="fsWhen" data-ok-hide data-in>
+        <legend class="fs__lg"><span class="mono">04</span>Preferred time</legend>
+        <div class="days" id="days" role="radiogroup" aria-label="Day"></div>
+        <div class="slots-wrap">
+          <div class="slots" id="slots" role="radiogroup" aria-label="Time"></div>
+        </div>
+        <p class="tz mono">Times shown in <b id="tz">UTC</b></p>
+        <span class="err mono">Choose a day and a time that works.</span>
+      </fieldset>
+
+      <div class="bform__send" data-ok-hide data-in>
+        <button class="btn btn--ink bform__btn" type="submit"><span>Book the walkthrough</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="bform__fine">We’ll send one calendar invite and one reminder. No newsletter unless you ask for it.</p>
+      </div>
+
+      <div class="ok" data-ok hidden>
+        <p class="mono book__k"><span>(Booked)</span><span>Invite on its way</span></p>
+        <h2 class="ok__title">You’re booked, <span id="okName">there</span>.</h2>
+        <p class="ok__lead">A calendar invite is on its way to <b id="okEmail"></b>. Reply to it if the time stops working; a human reads those.</p>
+
+        <div class="okcard">
+          <div class="okcard__date">
+            <span class="okcard__mon mono" id="okMon">Oct</span>
+            <span class="okcard__day" id="okDay">6</span>
+            <span class="okcard__wd mono" id="okWd">Tuesday</span>
+          </div>
+          <div class="okcard__body">
+            <p class="okcard__t">Sightline walkthrough</p>
+            <dl class="okcard__dl">
+              <div><dt class="mono">When</dt><dd id="okWhen"></dd></div>
+              <div><dt class="mono">Time zone</dt><dd id="okTz"></dd></div>
+              <div><dt class="mono">With</dt><dd>Maren Vos, Solutions</dd></div>
+              <div><dt class="mono">Topics</dt><dd id="okTopics"></dd></div>
+            </dl>
+            <div class="okcard__acts">
+              <a class="btn btn--lime okcard__btn" id="okIcs" href="#" download="sightline-walkthrough.ics"><span>Add to calendar</span><svg viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></a>
+              <a class="link-u" href="index.html">Back to the product</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prep">
+          <p class="mono prep__h">Worth bringing</p>
+          <ul>
+            <li><span class="mono">01</span>Read-only credentials for one warehouse, or nothing at all: the sample workspace works too.</li>
+            <li><span class="mono">02</span>Two questions you’ve waited more than a week for.</li>
+            <li><span class="mono">03</span>Your most sceptical analyst. They tend to enjoy it most.</li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>
+
+<!--@foot-->
+<footer class="foot foot--min" data-hdr-theme="dark">
+  <nav class="foot__idx mono" aria-label="Site index"><a href="index.html#product">Product</a><a href="index.html#how">How it works</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a><a href="customers.html">Customers</a><a href="changelog.html">Changelog</a></nav>
+  <div class="foot__base mono">
+    <span>© 2026 Sightline Analytics B.V.</span>
+    <span>Rotterdam · New York</span>
+    <a href="index.html">Back to product</a>
+  </div>
+</footer>
+<!--/@foot-->
+
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/SplitText.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/config.js"></script>
+<script src="../assets/core.js"></script>
+<script src="site.js"></script>
+</body></html>

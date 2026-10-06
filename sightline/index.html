@@ -1,0 +1,532 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sightline — Ask your data anything</title>
+<meta name="description" content="Sightline connects to your warehouse, billing and product events and answers plain-English questions with a chart, the reasoning and the SQL behind it. Median answer: 4.1 seconds.">
+<meta name="theme-color" content="#f4f4f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0b'/%3E%3Ccircle cx='11' cy='16' r='4.5' fill='%23c8f34b'/%3E%3Cpath d='M11 16h15M26 12v8' stroke='%23c8f34b' stroke-width='2'/%3E%3C/svg%3E">
+<script src="../assets/boot.js"></script>
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/core.css">
+<link rel="stylesheet" href="style.css">
+</head><body class="sl">
+
+<!--@hdr-->
+<header class="hdr" data-hdr data-theme="light">
+  <a class="brand" href="./" aria-label="Sightline, home">
+    <svg class="brand__mark" viewBox="0 0 30 20" aria-hidden="true"><circle cx="7" cy="10" r="5"/><path d="M7 10h21M28 5v10"/></svg>
+    <span>Sightline</span>
+  </a>
+  <nav class="hdr__nav" aria-label="Primary">
+    <a href="#product" aria-current="page">Product</a>
+    <a href="#how">How it works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="security.html">Security</a>
+    <a href="customers.html">Customers</a>
+    <a href="changelog.html">Changelog</a>
+  </nav>
+  <div class="hdr__end">
+    <a class="hdr__cta" href="book.html"><i class="hdr__dot"></i><span>Book a walkthrough</span></a>
+    <button class="hdr__burger" type="button" data-menu aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
+  </div>
+</header>
+<!--/@hdr-->
+
+<!--@menu-->
+<div class="menu" data-menu-panel>
+  <div class="menu__in">
+    <span class="mono menu__label">Menu</span>
+    <nav class="menu__nav" aria-label="Mobile">
+      <a href="#product" aria-current="page"><i>01</i>Product</a>
+      <a href="#how"><i>02</i>How it works</a>
+      <a href="pricing.html"><i>03</i>Pricing</a>
+      <a href="security.html"><i>04</i>Security</a>
+      <a href="customers.html"><i>05</i>Customers</a>
+      <a href="changelog.html"><i>06</i>Changelog</a>
+    </nav>
+    <a class="btn btn--lime menu__cta" href="book.html"><span>Book a walkthrough</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <p class="mono menu__foot">Rotterdam · New York</p>
+  </div>
+</div>
+<!--/@menu-->
+
+<main id="main">
+
+<!-- ───────── HERO + LIVE APP ───────── -->
+<section class="hero" id="product" data-hdr-theme="light">
+  <canvas class="hero__field" aria-hidden="true"></canvas>
+
+  <div class="hero__meta mono">
+    <span>Analytics for product &amp; growth teams</span>
+    <span class="hide-sm">SOC 2 Type II <i class="sep"></i> Read-only <i class="sep"></i> EU or US residency</span>
+  </div>
+
+  <h1 class="hero__title" aria-label="Ask your data anything.">
+    <span class="hl"><span>Ask your data</span></span>
+    <span class="hl"><span>anything.<i class="hero__caret" aria-hidden="true"></i></span></span>
+  </h1>
+
+  <div class="hero__side">
+    <p class="hero__lead">Sightline reads your warehouse, billing and product events, then answers plain-English questions with a chart, the reasoning and the SQL it ran. Your PM gets the number in four seconds. Your analyst gets the afternoon back.</p>
+    <div class="hero__ctas">
+      <a class="btn btn--ink" href="book.html"><span>Book a walkthrough</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="link-u" href="#how">See how it works</a>
+    </div>
+  </div>
+
+  <aside class="hero__try">
+    <p class="hero__hint"><span class="mono">(Try it)</span> Pick a question, or type your own.</p>
+    <svg class="hero__arrow" viewBox="0 0 120 60" aria-hidden="true"><path d="M2 6 C 40 6, 70 14, 92 44"/><path d="M80 42 L93 46 L95 32"/></svg>
+    <dl class="hero__facts">
+      <div><dt class="mono">Median answer</dt><dd>4.1 s</dd></div>
+      <div><dt class="mono">Connectors</dt><dd>40+</dd></div>
+      <div><dt class="mono">Answers with SQL</dt><dd>100%</dd></div>
+    </dl>
+  </aside>
+
+  <div class="app" id="app">
+    <div class="app__bar">
+      <div class="app__crumbs mono">
+        <svg class="app__logo" viewBox="0 0 30 20" aria-hidden="true"><circle cx="7" cy="10" r="5"/><path d="M7 10h21M28 5v10"/></svg>
+        <span>Halden</span><i>/</i><span>Growth</span><i>/</i><b>New question</b>
+      </div>
+      <div class="app__badges mono">
+        <span class="pill"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Read-only</span>
+        <span class="pill hide-xs">EU · Frankfurt</span>
+        <span class="avatar" aria-label="Signed in as M. Ruiz">MR</span>
+      </div>
+    </div>
+    <div class="app__body">
+      <aside class="app__side" aria-label="Workspace">
+        <div class="side__nav">
+          <span class="is-on"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h11M12 5l7 7-7 7"/></svg>Ask</span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16l-6-4-6 4z"/></svg>Saved answers<em>24</em></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg>Dashboards<em>6</em></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l4-5 3 3 4-6"/></svg>Metrics<em>38</em></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg>Sources<em>7</em></span>
+        </div>
+        <p class="side__label mono">Recent</p>
+        <ul class="side__recent">
+          <li>MRR by plan, last 6 months</li>
+          <li>Weekly active teams, EU</li>
+          <li>Refunds over €500 in Q3</li>
+          <li>Seats added per account</li>
+          <li>Time to first dashboard</li>
+        </ul>
+        <p class="side__foot mono"><i class="ok-dot"></i>Semantic layer v38<br>reviewed by analysts</p>
+      </aside>
+
+      <div class="app__main">
+        <form class="ask" id="askForm" autocomplete="off">
+          <label class="u-vh" for="askInput">Ask a question about Halden’s data</label>
+          <span class="ask__prompt mono" aria-hidden="true">ask&nbsp;&gt;</span>
+          <input class="ask__input" id="askInput" type="text" maxlength="120" placeholder="Ask anything about Halden’s data" enterkeyhint="send">
+          <button class="ask__go" type="submit" aria-label="Send question"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v7a3 3 0 0 1-3 3H6M10 11l-4 4 4 4"/></svg></button>
+        </form>
+        <div class="sugg" role="group" aria-label="Suggested questions">
+          <span class="sugg__label mono">Try</span>
+          <div class="sugg__row">
+            <button class="chip" type="button" data-q="churn">Why did churn spike in March?</button>
+            <button class="chip" type="button" data-q="onboarding">Which onboarding step loses the most users?</button>
+            <button class="chip" type="button" data-q="region">Compare EU vs US trial-to-paid</button>
+          </div>
+        </div>
+
+        <div class="ans" id="ans">
+          <div class="ans__head">
+            <p class="ans__q" id="ansQ"><span class="mono">You asked</span><b></b></p>
+            <p class="ans__status mono" id="ansStatus" aria-live="polite"><i class="spin"></i><span>Waiting for a question</span><em>0.0 s</em></p>
+          </div>
+          <div class="ans__grid">
+            <div class="ans__text">
+              <p class="ans__p" id="ansP" aria-live="polite"></p>
+              <ul class="ans__chips" id="ansChips"></ul>
+            </div>
+            <figure class="ans__fig" id="ansFig">
+              <figcaption class="ans__cap mono" id="ansCap"></figcaption>
+              <div class="ans__plot" id="ansPlot"></div>
+              <div class="ans__tip mono" id="ansTip" aria-hidden="true"></div>
+            </figure>
+          </div>
+          <div class="sql" id="sql">
+            <button class="sql__bar" type="button" id="sqlBar" aria-expanded="false" aria-controls="sqlBody">
+              <span class="sql__tag mono">SQL</span>
+              <span class="sql__meta mono" id="sqlMeta">Generated query</span>
+              <svg class="sql__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+            </button>
+            <div class="sql__body" id="sqlBody" data-lenis-prevent>
+              <div class="sql__in">
+                <button class="sql__copy mono" type="button" id="sqlCopy">Copy</button>
+                <pre><code id="sqlCode"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── THE QUEUE ───────── -->
+<section class="queue" data-hdr-theme="light">
+  <div class="sec-label mono"><span>(01)</span><span>The queue</span></div>
+  <p class="queue__text" data-scrub>Thursday, 4:52 pm. A PM needs one number for tomorrow’s planning. The analytics queue is nine tickets deep. Sightline answers in four seconds and attaches the query, so nobody has to take its word for it.</p>
+
+  <div class="race" aria-label="Time to an answer: an ad-hoc analytics request takes a median 3.2 days; Sightline takes 4.1 seconds.">
+    <div class="race__row">
+      <span class="race__who mono">Ad-hoc request to analytics</span>
+      <span class="race__bar race__bar--slow"><i></i></span>
+      <span class="race__val">3.2 days</span>
+    </div>
+    <div class="race__row">
+      <span class="race__who mono">Sightline</span>
+      <span class="race__bar race__bar--fast"><i></i></span>
+      <span class="race__val">4.1 s</span>
+    </div>
+    <p class="race__note mono">Not to scale. To scale, the top bar would be 67,400 times longer and leave the building.</p>
+  </div>
+</section>
+
+<!-- ───────── HOW IT WORKS ───────── -->
+<section class="how" id="how" data-hdr-theme="light">
+  <div class="how__head">
+    <div class="sec-label mono"><span>(02)</span><span>How it works</span></div>
+    <h2 class="h2" data-split="lines">Three steps. Two of them take seconds.</h2>
+  </div>
+
+  <div class="how__grid">
+    <ol class="how__steps">
+      <li class="step" data-step="0">
+        <span class="step__n mono">01 / Connect</span>
+        <h3 class="h3">Point it at the data you already have.</h3>
+        <p>Warehouse, billing, product events, CRM. Read-only credentials, 40+ connectors, about eleven minutes. Sightline drafts a semantic layer from your schema and query history; your data team reviews it like any other pull request.</p>
+        <ul class="step__list mono"><li>Read-only, checked on every connect</li><li>Schema mapped automatically</li><li>Metric definitions versioned in git</li></ul>
+      </li>
+      <li class="step" data-step="1">
+        <span class="step__n mono">02 / Ask</span>
+        <h3 class="h3">Type the question the way you’d ask a colleague.</h3>
+        <p>You get a chart, a two-sentence answer, the reasoning and the SQL it ran. If the question is ambiguous, Sightline asks which “active” you meant instead of guessing.</p>
+        <ul class="step__list mono"><li>Median answer 4.1 s</li><li>Uses your analysts’ definitions</li><li>Says “no answer” when there isn’t one</li></ul>
+      </li>
+      <li class="step" data-step="2">
+        <span class="step__n mono">03 / Share</span>
+        <h3 class="h3">Send the answer, not a screenshot.</h3>
+        <p>Links stay live, comments stay attached, and anyone with access can open the query and check the maths. Schedule it to Slack every Monday and stop being the person who pastes the numbers.</p>
+        <ul class="step__list mono"><li>Live links with comments</li><li>Scheduled posts to Slack and Docs</li><li>Permissions inherited from the warehouse</li></ul>
+      </li>
+    </ol>
+
+    <div class="how__stage">
+      <div class="panel" id="howPanel" data-state="0">
+        <div class="panel__bar mono">
+          <span class="panel__tabs"><b data-tab="0">Connect</b><b data-tab="1">Ask</b><b data-tab="2">Share</b></span>
+          <span class="panel__count"><em id="howCount">01</em> / 03</span>
+        </div>
+        <div class="panel__prog"><i id="howProg"></i></div>
+        <div class="panel__scenes">
+
+          <!-- scene 1 -->
+          <div class="scene scene--connect" data-scene="0">
+            <p class="scene__title">Sources <span class="mono">6 of 6 connected</span></p>
+            <ul class="conn">
+              <li style="--i:0"><span class="conn__ic mono">PG</span><span class="conn__name">Postgres<small>prod replica · 212 tables</small></span><span class="conn__rows mono">48.2 M rows</span><span class="conn__st mono"><i></i>Read-only</span></li>
+              <li style="--i:1"><span class="conn__ic mono">BQ</span><span class="conn__name">BigQuery<small>events warehouse · 64 tables</small></span><span class="conn__rows mono">9.8 B rows</span><span class="conn__st mono"><i></i>Read-only</span></li>
+              <li style="--i:2"><span class="conn__ic mono">$</span><span class="conn__name">Billing<small>subscriptions, invoices, refunds</small></span><span class="conn__rows mono">1.2 M rows</span><span class="conn__st mono"><i></i>Read-only</span></li>
+              <li style="--i:3"><span class="conn__ic mono">EV</span><span class="conn__name">Product events<small>214 event types</small></span><span class="conn__rows mono">2.6 B rows</span><span class="conn__st mono"><i></i>Read-only</span></li>
+              <li style="--i:4"><span class="conn__ic mono">CR</span><span class="conn__name">CRM<small>accounts, deals, owners</small></span><span class="conn__rows mono">318 K rows</span><span class="conn__st mono"><i></i>Read-only</span></li>
+              <li style="--i:5"><span class="conn__ic mono">SD</span><span class="conn__name">Support desk<small>tickets, CSAT</small></span><span class="conn__rows mono">904 K rows</span><span class="conn__st mono"><i></i>Read-only</span></li>
+            </ul>
+            <div class="layer">
+              <div class="layer__top mono"><span>Semantic layer</span><span>38 metrics · 412 tables mapped</span></div>
+              <div class="layer__bar"><i></i></div>
+            </div>
+          </div>
+
+          <!-- scene 2 -->
+          <div class="scene scene--ask" data-scene="1">
+            <div class="mini-ask"><span class="mono">ask &gt;</span><span class="mini-ask__q" data-type="Which plan upgrades fastest after a trial?"></span><i class="mini-ask__caret"></i></div>
+            <div class="mini-ans">
+              <p class="mini-ans__meta mono"><i class="ok-dot"></i>Answered in 3.6 s · 3 tables · 48,210 rows</p>
+              <p class="mini-ans__p">Team-plan trials upgrade fastest: a median of <b>11 days</b>, against 17 for Business and 29 for Starter.</p>
+              <div class="hbars" aria-label="Median days from trial to upgrade: Team 11, Business 17, Starter 29">
+                <div class="hbar" style="--v:.379;--d:0"><span class="mono">Team</span><i></i><b>11 d</b></div>
+                <div class="hbar" style="--v:.586;--d:1"><span class="mono">Business</span><i></i><b>17 d</b></div>
+                <div class="hbar" style="--v:1;--d:2"><span class="mono">Starter</span><i></i><b>29 d</b></div>
+              </div>
+              <p class="mini-ans__why"><span class="mono">Reasoning</span>Median days from trial start to first paid invoice, per plan. Internal and test accounts excluded; 212 trials still open were left out rather than guessed.</p>
+              <p class="mini-ans__sql mono"><span>SQL</span> 14 lines · billing.trials JOIN billing.subscriptions</p>
+            </div>
+          </div>
+
+          <!-- scene 3 -->
+          <div class="scene scene--share" data-scene="2">
+            <div class="share-card">
+              <div class="share-card__top">
+                <p>Trial to upgrade, by plan<span class="mono">Updated weekly</span></p>
+                <div class="spark" aria-hidden="true"><i style="--h:.38"></i><i style="--h:.59"></i><i style="--h:1"></i></div>
+              </div>
+              <div class="share-link mono"><span class="share-link__url">sightline / halden / answers / 7Kq2</span><span class="share-link__btn">Copied</span></div>
+            </div>
+            <ul class="thread">
+              <li style="--i:0"><span class="who mono">MR</span><p><b>Marta R.</b> Can we split Team by seat count?</p></li>
+              <li style="--i:1" class="is-bot"><span class="who mono"><svg viewBox="0 0 30 20" aria-hidden="true"><circle cx="7" cy="10" r="5"/><path d="M7 10h21"/></svg></span><p><b>Sightline</b> Done. Teams with 5+ seats upgrade in 8 days; under 5, in 14.</p></li>
+              <li style="--i:2"><span class="who mono">JO</span><p><b>Jonah O.</b> That’s the onboarding call. Shipping it to everyone with 5+ seats.</p></li>
+            </ul>
+            <p class="sched mono"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>Posts to #growth every Monday, 09:00</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── RECEIPTS ───────── -->
+<section class="rcpt" id="receipts" data-hdr-theme="light">
+  <div class="rcpt__left">
+    <div class="sec-label mono"><span>(03)</span><span>Receipts</span></div>
+    <h2 class="h2" data-split="lines">Every number links to the query that made it.</h2>
+    <p class="rcpt__sub">Tap a figure in this week’s digest. If Sightline can’t show its working, it doesn’t show the number.</p>
+
+    <article class="digest" data-reveal>
+      <p class="digest__meta mono"><span class="digest__avatar"><svg viewBox="0 0 30 20" aria-hidden="true"><circle cx="7" cy="10" r="5"/><path d="M7 10h21"/></svg></span>Sightline <i>in</i> #growth <em>Mon 09:00</em></p>
+      <p class="digest__text">Week 39 at Halden. Trial-to-paid reached <button class="num" type="button" data-r="0">18.4%</button>, the best week since launch. Net revenue retention held at <button class="num" type="button" data-r="1">112%</button>. Activation recovered to <button class="num" type="button" data-r="2">61.2%</button> after the invite step moved back to day one. Support tickets per account fell to <button class="num" type="button" data-r="3">0.42</button>.</p>
+    </article>
+  </div>
+
+  <div class="rcpt__right">
+    <div class="printer" aria-hidden="true"><span class="printer__slot"></span><span class="printer__led"></span></div>
+    <div class="receipt-wrap">
+      <div class="receipt" id="receipt" aria-live="polite">
+        <p class="receipt__brand mono">SIGHTLINE<br><small>receipt #<span data-f="no">0039-01</span></small></p>
+        <p class="receipt__metric" data-f="metric">Trial-to-paid</p>
+        <p class="receipt__value" data-f="value">18.4%</p>
+        <p class="receipt__def mono" data-f="def">Trials that become a paid subscription within 30 days, by trial start week.</p>
+        <pre class="receipt__sql mono" data-f="sql"></pre>
+        <dl class="receipt__lines mono">
+          <div><dt>Source</dt><dd data-f="source">billing.trials</dd></div>
+          <div><dt>Rows scanned</dt><dd data-f="rows">48,210</dd></div>
+          <div><dt>Runtime</dt><dd data-f="runtime">0.61 s</dd></div>
+          <div><dt>Freshness</dt><dd data-f="fresh">6 min</dd></div>
+          <div><dt>Defined in</dt><dd data-f="file">metrics/trial_to_paid.yml</dd></div>
+        </dl>
+        <p class="receipt__total mono"><span>Guesswork</span><span>0.00</span></p>
+        <div class="receipt__code" aria-hidden="true"></div>
+        <p class="receipt__thanks mono">Thank you for checking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── PROOF (dark) ───────── -->
+<section class="proof" id="proof" data-hdr-theme="dark">
+  <div class="proof__head">
+    <div class="sec-label mono"><span>(04)</span><span>Proof</span></div>
+    <h2 class="h2" data-split="lines">Numbers about the numbers.</h2>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <i class="stat__rule" data-line></i>
+      <p class="stat__n"><span data-count="4.1">4.1</span><small>s</small></p>
+      <p class="stat__t">Median time from question to chart, across 2.3 million questions asked in Q3.</p>
+    </div>
+    <div class="stat">
+      <i class="stat__rule" data-line></i>
+      <p class="stat__n"><span data-count="40">40</span><small>+</small></p>
+      <p class="stat__t">Connectors for warehouses, databases, billing, product events, CRM and support tools.</p>
+    </div>
+    <div class="stat">
+      <i class="stat__rule" data-line></i>
+      <p class="stat__n"><span data-count="12">12</span><small>B</small></p>
+      <p class="stat__t">Rows scanned every day, read-only, across Frankfurt and Oregon.</p>
+    </div>
+  </div>
+
+  <figure class="quote">
+    <blockquote data-split="lines">“Our PMs asked 1,900 questions in the first month. The analysts finally shipped the attribution model they had been postponing since spring.”</blockquote>
+    <figcaption class="mono"><b>Ines Okafor</b> Head of Data, Fieldnote</figcaption>
+  </figure>
+
+  <div class="conn-mq">
+    <p class="conn-mq__label mono"><span>Connects to</span><span>40+ sources, read-only</span></p>
+    <div class="mq" data-marquee="0.6" data-speed2="70">
+      <div class="mq__in">
+        <span>Postgres<sup>warehouse</sup></span><i></i>
+        <span>BigQuery<sup>warehouse</sup></span><i></i>
+        <span>MySQL<sup>database</sup></span><i></i>
+        <span>ClickHouse<sup>olap</sup></span><i></i>
+        <span>Stripe-style billing<sup>revenue</sup></span><i></i>
+        <span>Event streams<sup>product</sup></span><i></i>
+        <span>DuckDB<sup>files</sup></span><i></i>
+        <span>CRM<sup>sales</sup></span><i></i>
+        <span>Support desk<sup>tickets</sup></span><i></i>
+        <span>Parquet on S3-compatible storage<sup>lake</sup></span><i></i>
+      </div>
+    </div>
+    <div class="mq mq--rev" data-marquee="-0.45" data-speed2="70">
+      <div class="mq__in">
+        <span>Snowflake-style warehouses<sup>warehouse</sup></span><i></i>
+        <span>Redshift-style clusters<sup>warehouse</sup></span><i></i>
+        <span>Spreadsheets<sup>yes, really</sup></span><i></i>
+        <span>Feature flags<sup>product</sup></span><i></i>
+        <span>Ad platforms<sup>marketing</sup></span><i></i>
+        <span>Lakehouses<sup>lake</sup></span><i></i>
+        <span>Product analytics<sup>product</sup></span><i></i>
+        <span>HR systems<sup>people</sup></span><i></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="arch">
+    <div class="arch__head">
+      <h3 class="h3">Where a question goes.</h3>
+      <p>Your data stays in your warehouse. Sightline reads the semantic layer, writes SQL, runs it read-only, checks the result against known totals, and only then answers.</p>
+    </div>
+    <div class="arch__fig" id="arch" role="img" aria-label="Architecture: five sources (warehouse, product events, billing, CRM, support desk) feed a semantic layer; Sightline plans, writes SQL, runs it read-only and checks it; answers go to Slack, Docs, dashboards and the API."></div>
+  </div>
+</section>
+
+<!-- ───────── SECURITY ───────── -->
+<section class="sec" id="security" data-hdr-theme="light">
+  <div class="sec__left">
+    <div class="sec-label mono"><span>(05)</span><span>Security</span></div>
+    <h2 class="h2" data-split="lines">Read-only. On purpose.</h2>
+    <p class="sec__sub">Sightline can look at everything you allow and touch nothing. We built it so the security review takes one meeting, not one quarter.</p>
+    <p class="sec__more"><a class="btn btn--ink" href="security.html"><span>Read the full security sheet</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+    <div class="grant" data-reveal>
+      <p class="grant__bar mono"><span>sightline_ro.sql</span><span>Postgres</span></p>
+<pre class="mono"><span class="c">-- the only grants Sightline accepts</span>
+<span class="k">GRANT</span> USAGE  <span class="k">ON SCHEMA</span> analytics <span class="k">TO</span> sightline_ro;
+<span class="k">GRANT</span> SELECT <span class="k">ON ALL TABLES IN SCHEMA</span> analytics
+      <span class="k">TO</span> sightline_ro;
+
+<span class="c">-- anything wider and it refuses to connect:</span>
+<s>INSERT</s> <s>UPDATE</s> <s>DELETE</s> <s>ALTER</s> <s>DROP</s> <s>TRUNCATE</s></pre>
+    </div>
+  </div>
+
+  <div class="spec" role="table" aria-label="Security specification">
+    <div class="spec__row spec__row--head mono" role="row"><span role="columnheader">Area</span><span role="columnheader">What it means</span><span role="columnheader">Status</span></div>
+    <div class="spec__row" role="row"><span class="spec__k mono" role="rowheader">Access</span><span role="cell">Read-only service account. Sightline checks its grants on every connect and refuses to run if it could write, alter or drop anything.</span><span class="spec__v mono" role="cell"><i></i>Enforced</span></div>
+    <div class="spec__row" role="row"><span class="spec__k mono" role="rowheader">Certification</span><span role="cell">SOC 2 Type II, audited annually by an independent firm. The report is available under NDA.</span><span class="spec__v mono" role="cell"><i></i>Audited 2026</span></div>
+    <div class="spec__row" role="row"><span class="spec__k mono" role="rowheader">Residency</span><span role="cell">EU (Frankfurt) or US (Oregon), chosen per workspace. Questions, queries and caches never leave the region.</span><span class="spec__v mono" role="cell"><i></i>EU · US</span></div>
+    <div class="spec__row" role="row"><span class="spec__k mono" role="rowheader">Model training</span><span role="cell">Your rows, questions and answers are never used to train models. Contractually, not just politely.</span><span class="spec__v mono" role="cell"><i></i>Never</span></div>
+    <div class="spec__row" role="row"><span class="spec__k mono" role="rowheader">Retention</span><span role="cell">Result caches expire after 24 hours. Question history stays until you delete it, or the workspace.</span><span class="spec__v mono" role="cell"><i></i>24 h cache</span></div>
+    <div class="spec__row" role="row"><span class="spec__k mono" role="rowheader">Encryption</span><span role="cell">TLS 1.3 in transit, AES-256 at rest, customer-managed keys on request.</span><span class="spec__v mono" role="cell"><i></i>TLS 1.3</span></div>
+    <div class="spec__row" role="row"><span class="spec__k mono" role="rowheader">Identity</span><span role="cell">SAML SSO and SCIM provisioning. Row-level permissions are inherited from your warehouse roles.</span><span class="spec__v mono" role="cell"><i></i>SSO · SCIM</span></div>
+    <div class="spec__row" role="row"><span class="spec__k mono" role="rowheader">Audit log</span><span role="cell">Every question, query and share, with who asked and what ran. Exportable as CSV or streamed to your SIEM.</span><span class="spec__v mono" role="cell"><i></i>Exportable</span></div>
+  </div>
+</section>
+
+<!-- ───────── FAQ ───────── -->
+<section class="faq" id="faq" data-hdr-theme="light">
+  <div class="faq__left">
+    <div class="sec-label mono"><span>(06)</span><span>FAQ</span></div>
+    <h2 class="h2" data-split="lines">Fair questions.</h2>
+    <p class="faq__sub">Answered by people, for once. Anything missing, bring it to the walkthrough.</p>
+  </div>
+  <div class="acc" id="acc">
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">01</span><span>What happens when Sightline isn’t sure?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>It says so. If a question maps to two metric definitions, it asks which one you mean. If the data can’t answer it, you get “no answer” and the reason, not a confident guess with a nice chart.</p></div></div>
+    </div>
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">02</span><span>Does it replace our data team?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>No. It replaces the queue in front of them. Analysts own the semantic layer: they define “active”, “churned” and “MRR” once, and every answer uses their definitions. Most teams find their analysts get more interesting work, not less.</p></div></div>
+    </div>
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">03</span><span>Which sources do you support?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>Postgres, MySQL, BigQuery, ClickHouse, DuckDB, Snowflake-style and Redshift-style warehouses, plus billing, product-event, CRM and support tools. Over 40 in total, and a new one ships roughly every month.</p></div></div>
+    </div>
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">04</span><span>Is our data used to train models?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>No, and that is in the contract. Queries run in your warehouse. We store the question, the generated SQL and a 24-hour result cache, in the region you chose, and nothing else.</p></div></div>
+    </div>
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">05</span><span>How accurate is it?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>On our published benchmark of 1,200 product-analytics questions, 94.6% of answers match an analyst’s result exactly. The other 5.4% is why every answer ships with its query and every number has a receipt.</p></div></div>
+    </div>
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">06</span><span>How long does setup take?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>Connecting takes minutes. A semantic layer you trust takes most teams about a week: we draft it from your schema and query history, and your analysts correct it.</p></div></div>
+    </div>
+    <div class="acc__item">
+      <h3><button class="acc__q" type="button" aria-expanded="false"><span class="acc__n mono">07</span><span>How is it priced?</span><i class="acc__x" aria-hidden="true"></i></button></h3>
+      <div class="acc__a"><div><p>A flat monthly fee per workspace covers ten people who ask and 5,000 questions. Past that you pay for questions, never for the people who only read shared answers, so nobody rations logins. Enterprise is quoted after the walkthrough. <a class="link-u" href="pricing.html">See the maths</a>.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── KEEP GOING ───────── -->
+<section class="tease" data-hdr-theme="light">
+  <div class="sec-label mono"><span>(07)</span><span>Keep going</span></div>
+  <nav class="tease__list" aria-label="More about Sightline">
+    <a href="pricing.html"><span class="mono">Pricing</span><b>Pay for questions, not for logins.</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    <a href="customers.html"><span class="mono">Customers</span><b>Four teams. Four ugly questions.</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    <a href="changelog.html"><span class="mono">Changelog</span><b>v38, shipped in Week 39.</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+  </nav>
+</section>
+
+<!-- ───────── CTA ───────── -->
+<section class="cta" data-hdr-theme="dark">
+  <canvas class="cta__field" aria-hidden="true"></canvas>
+  <div class="cta__top mono"><span>(08)</span><span>30 min · Mon–Fri</span></div>
+  <h2 class="cta__title" data-split="lines">Skip the queue.</h2>
+  <div class="cta__row">
+    <p class="cta__sub">Thirty minutes on your own schema, no slides. Bring the question your dashboard can’t answer.</p>
+    <a class="cta__btn" href="book.html" data-magnetic="0.4" data-cursor="Book">
+      <span class="cta__btn-in"><span>Book a walkthrough</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!--@foot-->
+<footer class="foot" data-hdr-theme="dark">
+  <div class="foot__grid">
+    <div class="foot__col foot__col--idx">
+      <p class="mono foot__h">Index</p>
+      <a href="#product" aria-current="page">Product</a>
+      <a href="#how">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="security.html">Security</a>
+      <a href="customers.html">Customers</a>
+      <a href="changelog.html">Changelog</a>
+    </div>
+    <div class="foot__col">
+      <p class="mono foot__h">Talk to us</p>
+      <a href="book.html">Book a walkthrough</a>
+      <a href="pricing.html#calc">Estimate your month</a>
+      <a href="security.html#controls">Read the security sheet</a>
+    </div>
+    <div class="foot__col">
+      <p class="mono foot__h">Offices</p>
+      <p>Rotterdam, Kop van Zuid</p><p>New York, Flatiron</p>
+    </div>
+    <div class="foot__col foot__status">
+      <p class="mono foot__h">Security</p>
+      <p>SOC 2 Type II</p>
+      <p class="mono foot__small">Read-only by design</p>
+    </div>
+  </div>
+  <div class="foot__word" aria-hidden="true">
+    <span>Sightline</span>
+    <i class="foot__line"></i>
+  </div>
+  <div class="foot__base mono">
+    <span>© 2026 Sightline Analytics B.V.</span>
+    <span class="hide-sm">Read-only since day one</span>
+    <button type="button" class="to-top" id="toTop">Back to top</button>
+  </div>
+</footer>
+<!--/@foot-->
+
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/SplitText.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/config.js"></script>
+<script src="../assets/core.js"></script>
+<script src="site.js"></script>
+</body></html>
